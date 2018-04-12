@@ -1,0 +1,147 @@
+//config.absRefPrefix=/schaufenster/
+//config.baseURL=http://hosdev.sub.uni-hamburg.de/schaufenster/
+//config.typolinkEnableLinksAcrossDomains = 0
+page = PAGE
+page.100 < styles.content.get
+config.contentObjectExceptionHandler = 0
+plugin.tx_find.settings {
+        connections {
+           default {
+             options {
+                  host = localhost
+                  port = 8983
+                  path = /solr/ediss_1.0.19
+          }
+            }
+        }
+        standardFields {
+          title = title
+          snippet = creatorName
+        }
+        queryFields {
+          0 {
+                id = Suchschlund
+                noescape = 1
+                type = Text
+                query=(title:%s*)
+                //query =title:%1$s
+          }
+        }
+        paging {
+            perPage = 25
+            maximumPerPage = 1000
+            detailPagePaging = 1
+        }
+        facets {
+           5 {
+              id = Erscheinungsjahr
+              type = Histogram
+              field = publicationYear
+                     //   query = publicationYear:%s
+              fetchMaximum=1000
+              barWidth=10
+          }
+          15 {
+            id=Klassifikation
+            displayDefault = 3
+            query = (classification:"%s")
+            field = classification
+          }
+          15 {
+            id=Sammlung
+            displayDefault = 3
+            query = (collection:"%s")
+            field = collection
+          }
+          10 {
+            id = Karte
+            field = geoLocationPoint
+            type = Heatmap
+            sortOrder = index
+            fetchMaximum = 1000
+          }
+           18 {
+             id = Schöpfer
+             displayDefault = 7
+             query = (creatorName:"%s")
+             field = creatorName
+          }
+          19 {
+             id = DDC
+             displayDefault = 7
+             query = (subject_ddc:"%s")
+             field = subject_ddc
+          }
+          20 {
+             id = Fachgebiet
+             displayDefault = 23
+             query = (subject:"%s")
+             field = subject
+          }
+          25 {
+             id = publisher
+              displayDefault = 10
+            query = (publisher:"%s")
+             field = publisher
+          }
+          30 {
+             id = resourceType
+             field = resourceType
+            query = (resourceType:"%s")
+          }
+          
+        }
+
+      }
+
+page.includeJS {
+    1=EXT:schaufenster/Resources/Public/ddc_de.js
+
+    3=https://use.fontawesome.com/releases/v5.0.10/js/all.js
+    3.external=true
+    3.defer=true
+
+    
+    5=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+    5.external=true
+    
+    9=EXT:schaufenster/Resources/Public/Javascript/jQuery.balloon.js
+    
+    10=https://unpkg.com/leaflet@1.3.1/dist/leaflet.js
+    10.external=true
+    
+    11=EXT:schaufenster/Resources/Public/Javascript/jQuery.AutoLink.js
+
+    12=EXT:schaufenster/Resources/Public/Javascript/heatmap.js
+
+    13=EXT:schaufenster/Resources/Public/Javascript/heatmap-leaflet.js
+    
+    14=EXT:schaufenster/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.js
+
+    20=EXT:schaufenster/Resources/Public/Javascript/schaufenster.js
+
+    25=EXT:find/Resources/Public/JavaScript/geohash.js  
+
+    30=EXT:find/Resources/Public/JavaScript/find.js
+
+    40=https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js
+    40.external=true
+    
+    50=https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.selection.js
+    50.external=true
+    
+
+}
+page.includeCSS {
+//  copy the dist/images directory, awesome-markers.css, and awesome-markers.js to your project and include them:
+4=EXT:schaufenster/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.css   
+5=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+5.external=true
+10=http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css
+10.external=true
+15=https://fonts.googleapis.com/css?family=Roboto+Condensed
+15.external=true
+20=EXT:schaufenster/Resources/Public/CSS/main.css
+}
+
+plugin.tx_find.settings.languageRootPath = EXT:schaufenster/Resources/Private/Language

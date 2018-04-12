@@ -1,0 +1,70 @@
+
+
+a {
+    color: darkblue;
+}
+a:link, a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: inherit
+}
+
+div.navigation.top {
+    font-size:14px;
+    padding:0;margin:0
+}
+.resultList, .detail {
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    
+    background-color: rgba(250, 250, 250, 0.88)
+}
+.facets {
+    padding:5px;
+    margin-left:5px;
+    border-radius:5px;
+    background-color: rgba(255, 255, 255, 0.88)
+}
+article p {
+    margin-top:5px;
+}
+
+dl {
+    padding: 0.5em;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 190px;
+    text-align: right;
+    font-weight: bold;
+    color: green;
+  }
+  dt::after {
+    content: ": ";
+  }
+  dd {
+    margin: 0 0 0 340px;
+    padding: 0 0 0.5em 10.5em;
+  }
+  dd li,dd ul {
+    margin : 0;
+    padding : 0;
+    list-style-type: none;
+ }
+ .awesome-marker svg {
+        font-size: 14px;
+        margin-top: 15px;
+        color:white
+ }
+ * {
+    font-family: "Roboto Condensed";
+    color: #333;
+}

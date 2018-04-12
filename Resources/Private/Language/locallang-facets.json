@@ -1,0 +1,45 @@
+{
+   "de":{
+      "facet.collection":"Sammlung",
+      "facet.creatorName":"Schöpfer/Schöpferin",
+      "facet.title":"Titel",
+      "facet.publisher":"Herausgeber",
+      "facet.university":"Universität",
+      "facet.publicationYear":"Jahr der Veröffentlichung",
+      "facet.identifier":"Ident",
+       "facet.identifierType":"IdentTyp",
+        "facet.titleLang":"Titelsprache",
+         "facet.subject":"Schlagworte",
+          "facet.subject_ddc":"Dublin Core",
+            "facet.format":"Dokumentenformat",
+          "facet.rights":"Rechte", 
+          "facet.rightsUri":"Rechtelink", 
+        "facet.data":"Datum", 
+        "facet.language":"Sprache", 
+        "facet.resourceType":"Ressourcentyp",   
+        "facet.resourceTypeGeneral":"allgemeiner Ressourcentyp", 
+         "facet.url":"Url",
+         "facet.institute":"Institut"  
+             
+            
+   }
+}
+
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
