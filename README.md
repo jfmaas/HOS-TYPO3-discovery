@@ -228,3 +228,32 @@ die entspechende Konfiguration beispielsweise im Apache deaktivieren.
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
 geschrieben. Wir haben uns davon inspirieren lassen.
 
+### Benötigte Pakete (Apache, MySQL, PHP, Composer) installieren
+
+```
+$ sudo apt-get install apache2 libapache2-mod-php7.1 php7.1 php7.1-mysql mysql-server php-gd php-json php-imagick php-mbstring php-curl php-apcu php-soap php-xml php-zip composer
+```
+Während der Installation müssen Sie ein Root-Passwort für MySQL vergeben. Denken Sie sich eins aus
+(beispielsweise ``qwertz`) und notieren Sie dies.
+
+### Konfiguration MySQL
+
+Wenn die Installation abgeschlossen ist, müssen wir eine Datenbank und eine/n Nutzer/in anlegen:
+```
+    mysql -u root -p
+```
+Das öffnet nach erfolgreicher Eingabe öffnet sich ein mySQL-Monitorprogramm.
+Dort ist es angebracht folgende vier Kommandos abzusetzen – das Semikolon am
+Ende nicht vergessen! `secretpassword` durch eine Eigenschöpfung ersetzen! 
+
+Abschließen kann man den Monitor mit `quit` verlassen.     
+
+### Konfiguration PHP
+
+### Portanpassung 80 => 81
+
+### TYPO3 mit Composer installieren
+
+### Konfiguration von TYPO3 mit dem Installationsassistent
+
+### Installation des Schaufensters
