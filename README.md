@@ -142,6 +142,8 @@ server {
     server_name SERVER_NAME;
 
     location ^~ /solrAdmin/ {
+	allow 134.100.174.111           
+  	deny all;	
 	auth_basic "Eingeschraenkter Zugriff";
 	auth_basic_user_file /etc/nginx/.htpasswd; 
     	proxy_set_header X-Real-IP  $remote_addr;
@@ -170,7 +172,17 @@ Betrachten wir die Abteilungen im Einzelnen:
 Der Zugang `solrAdmin` hat zwei Funktionen: er ermöglicht den Zugang zur
 Weboberfläche der Solr-Administration und erlaubt die Manipulation des Cores
 über curl-Befehle. Aus offensichtlichen Gründen muss dieser Punkt besonders
-robust sein.   
+robust sein. Zum einen ist der Zugang nur über eine IP-Adresse erlaubt und
+zum Zweiten ist der Zugang mit Basic Authorization (Login/Password)
+geschützt. Um `.htpasswd` zu generieren kann man solche [OnlineTools](http://www.htaccesstools.com/htpasswd-generator/)
+nutzen oder man nutzt die Shell:
+```
+$ sudo  htpasswd -c /etc/nginx/.htpasswd solradmin
+```
+
+####solrQuery
+
+  
 
 ## Installation der LAMP-Umgebung
 
