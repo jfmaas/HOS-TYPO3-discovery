@@ -180,7 +180,33 @@ nutzen oder man nutzt die Shell:
 $ sudo  htpasswd -c /etc/nginx/.htpasswd solradmin
 ```
 
-####solrQuery
+#### solrQuery
+Um den Index für mobile Endgeräte verfügbar zu machen benötigen wir einen
+lesenden Zugang ohne IP-Beschränkung. Bei Nutzung von URls wie
+```
+http://HOSTNAME/solrQuery
+```
+wird intern der query-Endpunkt angesprochen. Der SolrCore wird über einen
+besonderen HTTP-Request-Header angesteuert. Nachfolgend ein
+Implementierungsbeispiel:
+```javascript
+var xhr = Network.createHTTPClient({
+	onload : function(e) {
+		var payload = JSON.parse(this.responseData);
+		Promise.resolve(payload);
+	},
+	onerror : function(E) {
+		Promise.reject();
+	},
+	timeout : 5000
+});
+var url = "http://xxx.100.28.175/solrQuery/"; // don't forget the trailing /!
+xhr.open("POST", url);
+xhr.setRequestHeader("SolrCoreName","MASTER");
+var query = ['q=*:*', 'rows=500', 'facet=true', 'facet.field=subject', 'facet.field=publicationYear', 'facet.sort=count'].join('&');
+xhr.send(query);
+
+```  
 
   
 
