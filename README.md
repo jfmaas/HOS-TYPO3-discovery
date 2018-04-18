@@ -238,6 +238,9 @@ Während der Installation müssen Sie ein Root-Passwort für MySQL vergeben. Den
 
 ### Konfiguration MySQL
 
+<img src="https://cdn-images-1.medium.com/max/2000/1*6bR8EymfDrVLb408TUNk-g.jpeg"
+width=100 />
+
 Wenn die Installation abgeschlossen ist, müssen wir eine Datenbank und eine/n Nutzer/in anlegen:
 ```
     mysql -u root -p
