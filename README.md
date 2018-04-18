@@ -14,6 +14,8 @@ Desweiteren wird ein Account (Konto/Zugang) zum Server benötigt, der
 sudo-Rechte verfügt.
 
 
+## Installation des Suchindexes (Solr)
+
 ## Installation der LAMP-Umgebung
 
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
