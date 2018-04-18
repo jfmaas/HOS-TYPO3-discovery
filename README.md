@@ -105,7 +105,12 @@ Als erstes sperren wir also den solr-Port mit:
 $ sudo ufew deny 8983/tcp
 ```
 
-### Installation von nginx
+### Installation von nginx als Portwrapper
+<img src="https://www.cbronline.com/wp-content/uploads/2016/07/NGINX.png"
+width=100 />
+Aus Sicherheitsgründen wird nach außen neben Port 22 nur Port 80 bzw. 443
+geöffnet. Damit das so funktioniert, setzen wir nginx als ReverseProxy ein.
+
     
 
 ## Installation der LAMP-Umgebung
