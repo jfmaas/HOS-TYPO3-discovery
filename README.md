@@ -74,6 +74,18 @@ stoppen können und fügt einen entsprechenden Mechanismus der Bootsequenz des
 Servers zu. Damit ist Solr auch nach einem Wiederhochfahren der Maschine
 verfügbar. 
 
+### Test der Solrinstallation
+
+Mittels
+```sh
+$ sudo service solr stop
+$ sudo service solr start
+$ sudo service solr status
+```
+Sollte sich Solr steuern lassen. Falls die Maschine im Internet sichtbar
+ist, dann kann die Solr-Administrationsoberfläche über den Port *8983*
+erreicht werden.  
+
 ## Installation der LAMP-Umgebung
 
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
