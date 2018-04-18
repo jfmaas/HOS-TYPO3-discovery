@@ -202,12 +202,14 @@ var xhr = Network.createHTTPClient({
 });
 var url = "http://xxx.100.28.175/solrQuery/"; // don't forget the trailing /!
 xhr.open("POST", url);
-xhr.setRequestHeader("SolrCoreName","MASTER"); // <== this is the mentioned
-corename
+xhr.setRequestHeader("SolrCoreName","MASTER"); // <== this is the mentioned corename
 var query = ['q=*:*', 'rows=500'].join('&');
 xhr.send(query);
-
 ```  
+#### Default
+Alle andere Requests landen auf Port 81, auf dem die noch zu installierende
+TYPO3-Instanz läuft. 
+
 
   
 
