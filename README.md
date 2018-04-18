@@ -210,10 +210,20 @@ xhr.send(query);
 Alle andere Requests landen auf Port 81, auf dem die noch zu installierende
 TYPO3-Instanz läuft. 
 
+## Aktivierung des ReverseProxies
 
-  
+Um die Datei `wrapper` wirksam weerden zu lassen, setzen wir einen
+symbolischen Link von Verzeichnis `sites-available` zu `sites-enabled` und
+restarten den Server:
+```sh
+$ sudo ln -s /etc/nginx/sites-available/wrapper /etc/nginx/sites-enabled/wrapper
+$ sudo service nginx restart
+```
+## Möglicher Fallstrick
+Auf Port 80 läuft schon ein Server. In diesem Fall den Prozess killen und
+die entspechende Konfiguration beispielsweise im Apache deaktivieren.
 
-## Installation der LAMP-Umgebung
+## Installation der TYPO3-Instanz
 
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
 geschrieben. Wir haben uns davon inspirieren lassen.
