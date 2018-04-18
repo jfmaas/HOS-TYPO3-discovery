@@ -256,4 +256,13 @@ Abschließen kann man den Monitor mit `quit` verlassen.
 
 ### Konfiguration von TYPO3 mit dem Installationsassistent
 
+Nach der Installation erreichen Sie TYPO3 unter der Adresse http://localhost. Dort treffen Sie zunächst auf den Installationsassistenten.
+
+*    In Schritt 2 muss als Username typo3_db_user und das von Ihnen für den Nutzer typo3_db_user gesetzte Passwort (secretpassword) eingetragen werden.
+*    In Schritt 3 wählen Sie "use an existing empty database"
+*    In Schritt 4 müssen Sie einen weiteren Account anlegen, diesmal für die Administration von TYPO3. Notieren Sie sich Benutzername und Passwort.
+*    Wählen Sie in Schritt 5 die Option Yes, create a base empty page to start from.
+
+
+
 ### Installation des Schaufensters
