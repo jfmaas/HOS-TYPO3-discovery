@@ -16,6 +16,16 @@ sudo-Rechte verfügt.
 
 ## Installation des Suchindexes (Solr)
 
+Bevor wir die Middleware in Form des CMS TYPO3 installieren, installieren
+wir den Suchindex. Am besten geht das mit wget. Dieses nützlich Script lässt sich
+mit:
+
+```sh
+sudo apt install wget
+```
+leicht installieren. 
+
+
 ## Installation der LAMP-Umgebung
 
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
