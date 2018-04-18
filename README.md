@@ -107,7 +107,8 @@ $ sudo ufew deny 8983/tcp
 
 ### Installation von nginx als Portwrapper
 <img src="https://www.cbronline.com/wp-content/uploads/2016/07/NGINX.png"
-width=100 />
+width=50 />
+
 Aus Sicherheitsgründen wird nach außen neben Port 22 nur Port 80 bzw. 443
 geöffnet. Damit das so funktioniert, setzen wir nginx als ReverseProxy ein.
 
