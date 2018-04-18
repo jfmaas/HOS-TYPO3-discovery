@@ -202,8 +202,9 @@ var xhr = Network.createHTTPClient({
 });
 var url = "http://xxx.100.28.175/solrQuery/"; // don't forget the trailing /!
 xhr.open("POST", url);
-xhr.setRequestHeader("SolrCoreName","MASTER");
-var query = ['q=*:*', 'rows=500', 'facet=true', 'facet.field=subject', 'facet.field=publicationYear', 'facet.sort=count'].join('&');
+xhr.setRequestHeader("SolrCoreName","MASTER"); // <== this is the mentioned
+corename
+var query = ['q=*:*', 'rows=500'].join('&');
 xhr.send(query);
 
 ```  
