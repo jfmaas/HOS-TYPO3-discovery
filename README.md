@@ -254,6 +254,27 @@ Abschließen kann man den Monitor mit `quit` verlassen.
 
 ### TYPO3 mit Composer installieren
 
+Wir nutzen eine Distribution von Cedric Ziel, die TYPO3 und die Erweiterung TYPO3-find beinhaltet. Die Installation erfolgt mit Hilfe des Tools Composer, das wir im ersten Schritt zusammen mit den anderen Paketen installiert haben.
+
+Geben Sie folgende Befehle ins Terminal ein:
+
+```
+$ cd /var/www/
+$ sudo composer create-project cedricziel/typo3-find-distribution katalog dev-master
+$ cd katalog
+$ sudo chown www-data:www-data -R web
+$ sudo touch web/FIRST_INSTALL
+$ sudo sh -c 'echo "<VirtualHost *:81>
+        DocumentRoot /var/www/katalog/web
+        ServerName katalog
+        Options -Indexes
+        DirectoryIndex index.php index.html
+</VirtualHost>" > /etc/apache2/sites-available/katalog.conf'
+$ sudo a2ensite katalog.conf
+$ sudo a2dissite 000-default.conf
+$ sudo service apache2 reload
+```
+
 ### Konfiguration von TYPO3 mit dem Installationsassistent
 
 Nach der Installation erreichen Sie TYPO3 unter der Adresse http://localhost. Dort treffen Sie zunächst auf den Installationsassistenten.
