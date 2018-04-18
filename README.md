@@ -28,7 +28,7 @@ leicht installieren.
 ### Installation Java
 
 <img
-src="https://mindsquare.de/files/java.jpeg" width=50 />
+src="https://mindsquare.de/files/java.jpeg" width=70 />
 
 Apache Solr ist ein Javaprogramm. Es wird ie Version 7 oder 8 benötigt. Deswegen müssen wir als Vorbedingung diese
 Paket gegebenfalls installieren. Deswegen testen wir die ordnungsgemäße
@@ -119,8 +119,18 @@ width=50 />
 
 Aus Sicherheitsgründen wird nach außen neben Port 22 nur Port 80 bzw. 443
 geöffnet. Damit das so funktioniert, setzen wir nginx als ReverseProxy ein.
-
-    
+```sh
+$ sudo apt-get install nginx
+```
+Nachdem der Webserver installiert ist, kann er wie gewohnt mit
+```sh
+$ sudo service nginx stop
+```
+gestoppt und mit 
+```sh
+$ sudo service nginx start
+```    
+gestartet werden.
 
 ## Installation der LAMP-Umgebung
 
