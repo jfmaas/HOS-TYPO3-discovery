@@ -84,7 +84,29 @@ $ sudo service solr status
 ```
 Sollte sich Solr steuern lassen. Falls die Maschine im Internet sichtbar
 ist, dann kann die Solr-Administrationsoberfläche über den Port *8983*
-erreicht werden.  
+erreicht werden. 
+
+### Installation der Firewall
+Aus Sicherheitsgründen sollten sowenig wie nötig offene Ports nach außen
+sichtbar und erreichbar sein. Wir werden später ``nginx` als Portmapper
+einsetzen. Jetzt ist der richtige Zeitpunkt `ufw` zu installieren. `ufw` ist
+ein Wrapper um iptables.
+```sh
+$ sudo apt-get install ufw
+```
+Mit 
+```sh
+sudo ufw status
+```
+lässt sich die Funktion im Überblick anzeigen.
+Als erstes sperren wir also den solr-Port mit:
+
+```sh
+$ sudo ufew deny 8983/tcp
+```
+
+### Installation von nginx
+    
 
 ## Installation der LAMP-Umgebung
 
