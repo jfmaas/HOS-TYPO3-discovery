@@ -61,6 +61,10 @@ Link anzupassen. Auf [dieser Seite](http://www.apache.org/dist/lucene/solr/)
 findet sich immer der aktuelle Stand. 
 
 ### Installation von Solr
+
+<img src="http://lucene.apache.org/solr/assets/identity/Solr_Logo_on_white.png"
+width=50 />
+
 Nun liegt im Verzeichnis `/opt` der gezippte Tarball. Mit nachfolgendem
 Kommando wird das Paket ausgepackt:
 
