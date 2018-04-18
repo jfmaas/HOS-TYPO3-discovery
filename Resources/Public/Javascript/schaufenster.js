@@ -152,5 +152,9 @@ $(document).ready(function() {
 		 L.marker(latlng, {icon: redMarker}).addTo(map).bindPopup(creators.join(', ')+ ':<br/>'+ $('.field-title').text()).openPopup();
 	});
 	$('.dd-geoLocationPoint').hide();
-
+        $('.fieldLabel[for="c-field-Suche"]').each(function(){
+        	var that=$(this);
+        	that.html('<a title="Zurück zur Suche" href="/">'+ that.text()+'</a>')
+        })
+		
 });

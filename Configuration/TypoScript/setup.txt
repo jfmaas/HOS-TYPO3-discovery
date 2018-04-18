@@ -1,6 +1,3 @@
-//config.absRefPrefix=/schaufenster/
-//config.baseURL=http://hosdev.sub.uni-hamburg.de/schaufenster/
-//config.typolinkEnableLinksAcrossDomains = 0
 page = PAGE
 page.100 < styles.content.get
 config.contentObjectExceptionHandler = 0
@@ -20,7 +17,7 @@ plugin.tx_find.settings {
         }
         queryFields {
           0 {
-                id = Suchschlund
+                id = Suche
                 noescape = 1
                 type = Text
                 query=(title:%s*)

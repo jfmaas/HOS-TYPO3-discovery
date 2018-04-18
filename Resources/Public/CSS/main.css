@@ -68,3 +68,7 @@ dl {
     font-family: "Roboto Condensed";
     color: #333;
 }
+.tx_find dd  {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}

@@ -1,7 +1,12 @@
-# TYPO3 Example Extension store_location
+# HOS-Schaufenster
 
-This TYPO3 extension is for the Extbase dokumentation located at
+Diese Dokumentation soll ein Leitfaden sein, damit ein Nachnutzer das
+HOS-Schaufenster auf einer neuen Maschine installieren und starten kann.
 
-[https://docs.typo3.org/typo3cms/ExtbaseFluidBook/4-FirstExtension/Index.html](https://docs.typo3.org/typo3cms/ExtbaseFluidBook/4-FirstExtension/Index.html)
- 
-Required TYPO3 Version: 8.7 LTS
+
+## Voraussetzungen
+
+Voraussetzung ist die Verfügbarkeit eines  Linux-Servers mit einer
+installierten, aktuellen Ubuntu-Distribution. Das kann
+auch ein virtualisierter Server auf einem Windows-PC oder einem Mac sein.
+
