@@ -60,6 +60,19 @@ Eventuell gibt es von Solr frischere Versionen, dann ist es sinnvoll obigen
 Link anzupassen. Auf [dieser Seite](http://www.apache.org/dist/lucene/solr/)
 findet sich immer der aktuelle Stand. 
 
+### Installation von Solr
+Nun liegt im Verzeichnis `/opt` der gezippte Tarball. Mit nachfolgendem
+Kommando wird das Paket ausgepackt:
+
+```sh
+$ sudo tar xzf solr-7.3.0.tgz solr-7.3.0/bin/install_solr_service.sh --strip-components=2
+sudo bash ./install_solr_service.sh solr-7.3.0.tgz
+```
+Dieses Installationsscript legt einen User `solr` an und baut
+Startscripte, damit wir über Kommandozeilenbefehle den Solr starten und
+stoppen können und fügt einen entsprechenden Mechanismus der Bootsequenz des
+Servers zu. Damit ist Solr auch nach einem Wiederhochfahren der Maschine
+verfügbar. 
 
 ## Installation der LAMP-Umgebung
 
