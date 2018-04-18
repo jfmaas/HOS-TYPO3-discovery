@@ -132,6 +132,46 @@ $ sudo service nginx start
 ```    
 gestartet werden.
 
+### Einrichtung der Wrapper
+Unter `/etc/nginx/sites-available` legen wir mit eine Datei `wrapper` mit
+folgendem Inhalt an:
+
+```
+server {
+    listen *:80; # IPv4
+    server_name SERVER_NAME;
+
+    location ^~ /solrAdmin/ {
+	auth_basic "Eingeschraenkter Zugriff";
+	auth_basic_user_file /etc/nginx/.htpasswd; 
+    	proxy_set_header X-Real-IP  $remote_addr;
+    	proxy_set_header X-Forwarded-For $remote_addr;
+    	proxy_set_header Host $host;
+	proxy_pass http://127.0.0.1:8983/solr/;
+    }
+    location ^~ /solrQuery {
+        proxy_set_header X-Real-IP  $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header Host $host;
+        proxy_pass http://127.0.0.1:8983/solr/$http_SolrCoreName/query;
+    }
+    location  ^~ /  {
+        proxy_set_header X-Real-IP  $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header Host $host;
+        proxy_pass http://127.0.0.1:81/;
+    }
+}
+
+```
+Betrachten wir die Abteilungen im Einzelnen:
+
+#### solrAdmin
+Der Zugang `solrAdmin` hat zwei Funktionen: er ermöglicht den Zugang zur
+Weboberfläche der Solr-Administration und erlaubt die Manipulation des Cores
+über curl-Befehle. Aus offensichtlichen Gründen muss dieser Punkt besonders
+robust sein.   
+
 ## Installation der LAMP-Umgebung
 
 Eine grossartiges Rezept hat [Felix Lohmeier](https://github.com/felixlohmeier/summerschool-openrefine/blob/master/katalog-mit-typo3-find/installation-von-typo3-und-typo3-find.md)
