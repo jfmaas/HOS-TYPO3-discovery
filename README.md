@@ -255,9 +255,14 @@ Abschließen kann man den Monitor mit `quit` verlassen.
 TYPO3 braucht sehr viel Resourcen, deswegen ist es angeraten, einige Grenzen
 auszuweiten:
 
-
+```sh
+sudo sed -i 's/max_execution_time = 30/max_execution_time = 240/' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/; max_input_vars = 1000/max_input_vars = 1500/' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 8M/' /etc/php/7.0/apache2/php.ini
+```
 
 ### Portanpassung 80 => 81
+
 
 ### TYPO3 mit Composer installieren
 
