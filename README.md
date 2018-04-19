@@ -256,13 +256,39 @@ TYPO3 braucht sehr viel Resourcen, deswegen ist es angeraten, einige Grenzen
 auszuweiten:
 
 ```sh
-sudo sed -i 's/max_execution_time = 30/max_execution_time = 240/' /etc/php/7.0/apache2/php.ini
-sudo sed -i 's/; max_input_vars = 1000/max_input_vars = 1500/' /etc/php/7.0/apache2/php.ini
+$ sudo sed -i 's/max_execution_time = 30/max_execution_time = 240/' /etc/php/7.0/apache2/php.ini
+$ sudo sed -i 's/; max_input_vars = 1000/max_input_vars = 1500/' /etc/php/7.0/apache2/php.ini 
 sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 8M/' /etc/php/7.0/apache2/php.ini
+```
+Abschließend ist ein Neustart des Webservers erforderlich:
+
+```sh
+sudo /etc/init.d/apache2 restart
 ```
 
 ### Portanpassung 80 => 81
 
+In der Standardinstallation des Apache läuft auf Port 80. Auf diesem Port
+läuft unser der nginx-Wrapper. Unser TYPO3-Instanz muss deswegen einen
+anderen (internen) Port nutzen. Wir wählen 81.
+
+In der Datei 
+
+```
+/etc/apache2/ports.conf 
+```
+gibt ers eine Zeile:
+
+```
+Listen 80
+```
+
+Mit einem Editor unserer Wahl ändern wir diesen Eintrag auf:
+```
+Listen 81
+```
+
+Nun müssen wir noch den virtuellen Host modifizieren.
 
 ### TYPO3 mit Composer installieren
 
