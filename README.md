@@ -272,23 +272,24 @@ In der Standardinstallation des Apache läuft auf Port 80. Auf diesem Port
 läuft unser der nginx-Wrapper. Unser TYPO3-Instanz muss deswegen einen
 anderen (internen) Port nutzen. Wir wählen 81.
 
-In der Datei 
 
-```
-/etc/apache2/ports.conf 
-```
-gibt ers eine Zeile:
-
-```
-Listen 80
+```sh
+sudo sed 's/80/81/' /etc/apache2/ports.conf
+sudo sed 's/80/81/' /etc/apache2/sites-enabled/000-default.conf #for your examples sake
+sudo service apache2 restart
 ```
 
-Mit einem Editor unserer Wahl ändern wir diesen Eintrag auf:
-```
-Listen 81
+Mit nachfolgendem Befehl
+
+```sh
+$ sudo netstat -tlpn
 ```
 
-Nun müssen wir noch den virtuellen Host modifizieren.
+können wir überprüfen, ob jetzt alles auf Feinste eingerichtet ist.
+
+
+
+
 
 ### TYPO3 mit Composer installieren
 
