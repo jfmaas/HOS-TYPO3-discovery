@@ -275,7 +275,6 @@ anderen (internen) Port nutzen. Wir wählen 81.
 
 ```sh
 sudo sed 's/80/81/' /etc/apache2/ports.conf
-sudo sed 's/80/81/' /etc/apache2/sites-enabled/000-default.conf #for your examples sake
 sudo service apache2 restart
 ```
 
@@ -287,13 +286,21 @@ $ sudo netstat -tlpn
 
 können wir überprüfen, ob jetzt alles auf Feinste eingerichtet ist.
 
-
-
-
+```
+rainer@hosdev:/etc/apache2$ sudo netstat -tlpn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      17583/sshd      
+tcp        0      0 0.0.0.0:8983            0.0.0.0:*               LISTEN      46170/java      
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1249/mysqld     
+tcp        0      0 127.0.0.1:7983          0.0.0.0:*               LISTEN      46170/java      
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      18333/nginx -g daem
+tcp        0      0 0.0.0.0:81              0.0.0.0:*               LISTEN      40335/apache2   
+```
 
 ### TYPO3 mit Composer installieren
 
-Wir nutzen eine Distribution von Cedric Ziel, die TYPO3 und die Erweiterung TYPO3-find beinhaltet. Die Installation erfolgt mit Hilfe des Tools Composer, das wir im ersten Schritt zusammen mit den anderen Paketen installiert haben.
+Wir nutzen eine [Distribution von Cedric Ziel](https://github.com/cedricziel/typo3-find-distribution), die TYPO3 und die Erweiterung TYPO3-find beinhaltet. Die Installation erfolgt mit Hilfe des Tools Composer, das wir im ersten Schritt zusammen mit den anderen Paketen installiert haben.
 
 Geben Sie folgende Befehle ins Terminal ein:
 
