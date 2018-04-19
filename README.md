@@ -252,6 +252,10 @@ Ende nicht vergessen! `secretpassword` durch eine Eigenschöpfung ersetzen!
 Abschließen kann man den Monitor mit `quit` verlassen.     
 
 ### Konfiguration PHP
+TYPO3 braucht sehr viel Resourcen, deswegen ist es angeraten, einige Grenzen
+auszuweiten:
+
+
 
 ### Portanpassung 80 => 81
 
