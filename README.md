@@ -1,7 +1,7 @@
 # HOS-Schaufenster
 
-Diese Dokumentation soll ein Leitfaden sein, damit ein Nachnutzer das
-HOS-Schaufenster auf einer neuen Maschine installieren und starten kann.
+This documentation should be a receipt for user who wants to install the
+extension of typo3find extension.
 
 
 ## Voraussetzungen
