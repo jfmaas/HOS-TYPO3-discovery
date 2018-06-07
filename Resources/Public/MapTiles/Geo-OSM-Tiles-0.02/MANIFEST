@@ -1,0 +1,9 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+downloadosmtiles.pl
+lib/Geo/OSM/Tiles.pm
+t/Geo-OSM-Tiles.t
+t/downloadosmtiles.t
+META.yml                                 Module meta-data (added by MakeMaker)

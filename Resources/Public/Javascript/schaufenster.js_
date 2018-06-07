@@ -160,9 +160,8 @@ $(function() {
         });
         // adding fancyBox container:
         $('<div id="largeheatmapcontainer" style="display: none;"><div class="largeheatmap" /></div>').appendTo('body');
-
-/*        $('.searchForm').prepend('<a href="/" title="Zurück zum Start der Suche" class="bel-haus" style="float-left;font-size:64px;color:white;float:left"></a>');
-  */      $('.resultList li').each(function(){
+        $('.searchForm').prepend('<a href="/"><img style="position:absolute;top:5px;opacity:0.4" src="typo3conf/ext/schaufenster/Resources/Public/CSS/home-512.png" width="50" title="Zurück zur Startseite"/></a>');
+        $('.resultList li').each(function(){
         	var that= $(this);
         	var type = that.find('.field-resourceType').text().trim();;
         	that.prepend('<span style="font-size:70px;margin-left:-.8em;display:inline"  class="'+getResIcon(type)+'"></span>');
@@ -173,5 +172,5 @@ $(function() {
         	that.addClass(getResIcon(that.attr('value')));
         })
 
-       
+        
 });

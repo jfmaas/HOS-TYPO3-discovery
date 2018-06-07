@@ -1,0 +1,31 @@
+{
+    "name": "subhh/schaufenster",
+    "type": "typo3-cms-extension",
+    "description": "My description comes here",
+    "homepage": "https://example.com",
+    "license": ["GPL-2.0+"],
+    "keywords": ["TYPO3 CMS", "typo3find schaufenster HamburgOpenScience"],
+    "support": {
+        "issues": "https://forge.typo3.org/projects/extension-schaufenster"
+    },
+    "require": {
+        "typo3/cms-core": "^7.6.0 || ^8.7.0",
+        "subugoe/find": "^3.1",
+        "solarium/solarium": "^3.7",
+        "typo3-ter/introduction": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "subhh\\schaufenster\\": "Classes/"
+        }
+    },
+    "replace": {
+        "schaufenster": "self.version",
+        "typo3-ter/schaufenster": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "schaufenster"
+        }
+    }
+}
