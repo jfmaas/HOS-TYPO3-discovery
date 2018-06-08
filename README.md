@@ -12,6 +12,9 @@ width=420 />
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss04.png"
 width=420 />
 
+# Architecture
+
+
 # Installation of HOS on CentOS
 
 ## Prerequisites
