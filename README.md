@@ -15,6 +15,9 @@ width=420 />
 ## Architecture
 ### LAMP
 Linux, Apache, mySQL (MariaDB) and PHP7.1
+The project is tested on two Linux distributions:
+* Ubuntu  
+
 ### TYPO3
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
