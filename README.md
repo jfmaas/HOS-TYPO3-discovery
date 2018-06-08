@@ -13,10 +13,12 @@ width=420 />
 width=420 />
 
 ## Architecture
-
-* <img src="https://s24255.pcdn.co/wp-content/uploads/2017/05/lamp_stack.jpg" width=100 />
+* LAMP
+* TYPO3
 * Extension find (subgoe)
 * Extension discovery (sbhh) 
+
+
 
 ## Installation of HOS on CentOS
 
