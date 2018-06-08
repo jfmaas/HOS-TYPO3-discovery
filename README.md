@@ -14,9 +14,16 @@ width=420 />
 
 ## Architecture
 ### LAMP
-Linux, Apache, mySQL (MariaDB) and PHP7.1
+
+#### Linux
 The project is tested on two Linux distributions:
-* Ubuntu  
+
+* Ubuntu 16.04 LTS xenial, this was preinstalled by RRZ Hamburg
+* CentOS , this was preinstalled by RZ Hamburg, managed by Chef
+
+#### Apache
+#### mySQL
+#### PHP7
 
 ### TYPO3
 ### Extension find (subgoe)
