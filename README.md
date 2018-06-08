@@ -14,6 +14,10 @@ width=420 />
 
 ## Architecture
 
+* LAMP Stack
+* TYPO3
+* Extension find (subgoe)
+* Extension discovery (sbhh) 
 
 ## Installation of HOS on CentOS
 
