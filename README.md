@@ -18,8 +18,9 @@ width=420 />
 #### Linux
 The project is tested on two Linux distributions:
 
-* Ubuntu 16.04 LTS xenial, preinstalled by (RRZ Hamburg)[https://www.rrz.uni-hamburg.de/] 
-* CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
+<img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
+width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by (RRZ Hamburg)[https://www.rrz.uni-hamburg.de/] 
+<img src="" width=100 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
 #### Apache
 #### mySQL
