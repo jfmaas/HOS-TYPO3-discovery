@@ -1,6 +1,7 @@
-# HOS-Schaufenster
+# HOS-Discovery
 
-This repo describes the using of the TYPO3-Extensions `schaufenster`. The extension extends the [typo3find extension](https://github.com/subugoe/typo3-find) of subugoe and is for the HamburgOpenScience project "schaufenster"
+This repo describes the using of the TYPO3-Extensions `discovery`. The extension extends the [typo3find extension](https://github.com/subugoe/typo3-find) of subugoe and is for the HamburgOpenScience project
+"hos-discovery"
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss01.png"
 width=420 /> 
