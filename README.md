@@ -13,10 +13,10 @@ width=420 />
 width=420 />
 
 ## Architecture
-* LAMP
-* TYPO3
-* Extension find (subgoe)
-* Extension discovery (subhh) 
+### LAMP
+### TYPO3
+### Extension find (subgoe)
+### Extension discovery (subhh) 
 
 
 
