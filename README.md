@@ -14,6 +14,7 @@ width=420 />
 
 ## Architecture
 ### LAMP
+Linux, Apache, mySQL (MariaDB) and PHP7.1
 ### TYPO3
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
