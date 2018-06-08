@@ -24,8 +24,12 @@ width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.
 <img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png" width=100 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
 #### Apache
+v2.4.0
 #### mySQL
+
+
 #### PHP7
+v7.1.0
 
 ### TYPO3
 ### Extension find (subgoe)
