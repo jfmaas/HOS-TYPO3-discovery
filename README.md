@@ -16,7 +16,7 @@ width=420 />
 * LAMP
 * TYPO3
 * Extension find (subgoe)
-* Extension discovery (sbhh) 
+* Extension discovery (subhh) 
 
 
 
