@@ -21,7 +21,7 @@ width=420 />
 
 The start point is a preconfigured CentOS machine with running web server. 
 
-## Architecture
+## Software stack
 
 * Apache server with TYPO3 on port 80/443
 * Solr on port 9883
@@ -59,9 +59,9 @@ In folder `/etc/httpd/sites-available` we place a file `schaufenster.conf` with 
 </VirtualHost>
 ```
 
-## Installing solr
+### Installing solr
 
-### Installing Java
+#### Installing Java
 
 Before starting, update your system with the latest versions of installed packages.
 
