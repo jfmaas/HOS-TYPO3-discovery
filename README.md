@@ -12,12 +12,12 @@ width=420 />
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss04.png"
 width=420 />
 
-# Architecture
+## Architecture
 
 
-# Installation of HOS on CentOS
+## Installation of HOS on CentOS
 
-## Prerequisites
+### Prerequisites
 
 The start point is a preconfigured CentOS machine with running web server. 
 
@@ -27,7 +27,7 @@ The start point is a preconfigured CentOS machine with running web server.
 * Solr on port 9883
 * Apache reverseProxy for exposing solr to port 80/443
 
-## Modification of apache
+### Modification of apache
 In folder `/etc/httpd/sites-available` we place a file `schaufenster.conf` with content below:
 
 ```
