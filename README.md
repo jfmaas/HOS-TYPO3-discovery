@@ -323,16 +323,6 @@ Inside the folder `/etc/httpd/sites-available` we have created a file
 	AuthUserFile "/etc/httpd/.htpassword"
 	Require user solr
      </Location>	
-
-
-     <Location /api/>                 
-        AuthType Basic
-        AuthName "Restricted API"  
-        AuthBasicProvider file
-        AuthUserFile "/etc/httpd/.htpassword"
-        Require user api 
-     </Location>  
-
 			
      ProxyPreserveHost On
      ProxyRequests Off   
