@@ -337,6 +337,19 @@ width=80 />
      		
 </VirtualHost>
 ``` 
+#### Creating solr-admin user
+This command:
+
+```
+sudo htpasswd -c /etc/httpd/.htpassword solradmin
+```
+
+creates a new file `.htpassword` inside apache root config (we have
+announced this in our host section) and adds a user `solradmin`.
+
+
+Now we can access the admin UI by URL like `http://myserver.com/solrAdmin`. 
+
 
 A symbol link to `sites-enabled` activates the configuration:
 
