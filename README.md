@@ -337,6 +337,14 @@ width=80 />
      		
 </VirtualHost>
 ``` 
+
+A symbol link to `sites-enabled` activates the configuration:
+
+```
+ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf 
+```
+
+
 #### Creating solr-admin user
 This command:
 
@@ -351,12 +359,6 @@ announced this in our host section) and adds a user `solradmin`.
 Now we can access the admin UI by URL like `http://myserver.com/solrAdmin`. 
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/solradmin.png)
-
-A symbol link to `sites-enabled` activates the configuration:
-
-```
-ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf 
-```
 
 ### TYPO3
 ### Extension find (subgoe)
