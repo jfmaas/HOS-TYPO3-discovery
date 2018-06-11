@@ -170,11 +170,26 @@ TYPO3:
 sudo yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-soap curl curl-devel
 ```
 
+In the end you can improve the performance of PHP with:
+
+```
+sudo sed -i 's/max_execution_time = 30/max_execution_time = 240/' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/; max_input_vars = 1000/max_input_vars = 1500/' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 8M/' /etc/php/7.0/apache2/php.ini
+```
+This make sense for both distributions.
+
+
 With this step the LAMP install is finished on both platforms.
 
 ------------------------------
 
 ### Solr installation
+
+#### UBUNTU 
+
+
+
  
 
 ### TYPO3
