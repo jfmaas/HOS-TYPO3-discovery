@@ -277,6 +277,8 @@ sudo service solr stop
 sudo service solr restart
 ```
 
+More about solr installation here: https://lucene.apache.org/solr/guide/7_1/installing-solr.html
+
 ### Increasing of performance
 
 In `/etc/security/limits.conf` you can add these lines:
