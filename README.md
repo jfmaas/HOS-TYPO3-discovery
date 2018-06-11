@@ -361,7 +361,15 @@ For installing TYPO3 and the extensions we use `composer`.
 
 <img src="https://camo.githubusercontent.com/fe973e9a7d71c297d5473213f0517ec825568534/687474703a2f2f676574636f6d706f7365722e6f72672f696d672f6c6f676f2d636f6d706f7365722d7472616e73706172656e742e706e67" width=100 />
 
+First we install curl by:
 
+```
+sudo apt-get install curl
+```
+
+```
+sudo apt-get install curl
+```
 
 
 ### Extension find (subgoe)
