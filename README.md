@@ -19,17 +19,19 @@ width=420 />
 The project is tested on two Linux distributions:
 
 <img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
-width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.rrz.uni-hamburg.de/) 
+width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.rrz.uni-hamburg.de/) 
 
-<img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png" width=100 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
+<img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
+width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
 
 Depending on linux distribution (ubuntu/centos) we use different package
 manager. 
 
-##### UBUNTU
+##### <img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
+width=20 /> UBUNTU
 
-It is eaysy:
+It is easy done:
 
 ```
 sudo apt-get update
