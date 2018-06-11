@@ -114,7 +114,7 @@ sudo service httpd restart
 Now we can test on both platforms the functionality with:
 
 ```
-sudo netstat -lt
+sudo netstat -lnt
 ```
 
 
