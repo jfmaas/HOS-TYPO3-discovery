@@ -27,6 +27,12 @@ width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.
 Depending on linux distribution (ubuntu/centos) we use different package
 manager. 
 
+<img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
+width=40 />
+
+```
+sudo apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mysql-server php-gd php-json php-imagick php-mbstring php-curl php-apcu php-soap php-xml php-zip composer
+```
 
 
 
