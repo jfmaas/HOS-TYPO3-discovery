@@ -122,6 +122,29 @@ You must see: 22, 80, 3306
 If the server is in internet you can test the (web-) server with your
 browser.
 
+#### Getting MySQL Support In PHP
+
+To get MySQL support in PHP, we can install the php-mysqlnd package. It's a good idea to install some other PHP modules as well as you might need them for your applications. You can search for available PHP5 modules like this:
+
+```
+sudo yum search php
+```
+
+Pick the ones you need and install them like this:
+
+```
+sudo yum -y install php-mysqlnd php-pdo
+```
+
+In the next step I will install some common PHP modules that are required by
+TYPO3:
+
+```
+sudo yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-soap curl curl-devel
+```
+
+With this step the LAMP install is finished on both platforms.
+
 ------------------------------
 
  
