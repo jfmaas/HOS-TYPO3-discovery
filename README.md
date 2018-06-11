@@ -417,3 +417,8 @@ extension.
 
 ### Searchfield
 
+The search field consists of three parts:
+
+* input field(s)
+* input selector
+* submit button
