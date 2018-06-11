@@ -27,15 +27,12 @@ width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.
 v2.4.0
 #### mySQL
 
-
 #### PHP7
 v7.1.0
 
 ### TYPO3
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
-
-
 
 ## Installation of HOS on CentOS
 
