@@ -110,6 +110,16 @@ Alternativly we can use the same command as UBUNTU:
 ```
 sudo service httpd restart
 ```
+
+Now we can test on both platforms the functionality with:
+
+```
+sudo netstat -lt
+```
+
+
+
+
  
 
 ### TYPO3
