@@ -43,6 +43,26 @@ It is easy done:
 sudo apt-get update
 sudo apt-get install apache2 libapache2-mod-php7.1 php7.1 php7.1-mysql mysql-server php-gd php-json php-imagick php-mbstring php-curl php-apcu php-soap php-xml php-zip composer
 ```
+With this command above apache, mysql and pho is installed. After this we
+have to configure mysql by creating users:
+
+```
+mysql -u root -p
+```
+During this act you have to create an user.
+
+Next:
+
+```
+CREATE DATABASE typo3 DEFAULT CHARACTER SET utf8;
+CREATE USER typo3_db_user@localhost IDENTIFIED BY 'secretpassword';
+GRANT ALL PRIVILEGES ON typo3.* TO typo3_db_user@localhost;
+FLUSH PRIVILEGES;
+quit;
+```	
+ 
+'secretpassword' is only an example, you have to substitute!
+
 
 ##### CENTOS
 
