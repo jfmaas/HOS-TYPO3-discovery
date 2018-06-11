@@ -385,6 +385,26 @@ and move the composer.phar file:
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
+Use the composer command to test the installation. If Composer is installed correctly, the server will respond with a long list of help information and commands:
+
+```
+user@localhost:~# composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                /_/
+Composer version 1.3.2 2017-01-27 18:23:41
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+
+```
 
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
