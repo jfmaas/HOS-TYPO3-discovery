@@ -195,10 +195,40 @@ sudo mkdir /usr/java
 sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64 /usr/java/default
 ```
 
-
-
 #### CENTOS
- 
+
+To install Java, run the following command:
+
+```
+sudo yum install java-1.8.0-openjdk.x86_64
+```
+
+
+Once Java is installed, you can verify it by running the following command:
+
+```
+sudo java -version
+```
+
+Output:
+
+```
+openjdk version "1.8.0_111"
+OpenJDK Runtime Environment (build 1.8.0_111-b15)
+OpenJDK 64-Bit Server VM (build 25.111-b15, mixed mode)
+```
+
+### Downloading and Installing Apache Solr
+
+First you will need to download the latest version of Apache Solr from the Apache website.
+You can easily download it using the wget command:
+
+```
+wget http://apache.org/dist/lucene/solr/7.3.1/solr-7.3.1.tgz
+``` 
+You can see the available version under http://apache.org/dist/lucene/solr/
+
+
 
 ### TYPO3
 ### Extension find (subgoe)
