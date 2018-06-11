@@ -298,6 +298,8 @@ additionally we could realize an access restriction.
 Inside the folder `/etc/httpd/sites-available` we have created a file
 `solrproxy.conf` with the content below:
 
+
+<img src="https://goodlogo.com/images/logos/apache_software_foundation_logo_3074.gif" width:80 />
 ```
 <VirtualHost *:80>
     # 212.1.41.47
