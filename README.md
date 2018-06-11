@@ -173,6 +173,7 @@ sudo yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbs
 With this step the LAMP install is finished on both platforms.
 
 ------------------------------
+
 ### Solr installation
  
 
