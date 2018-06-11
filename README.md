@@ -421,9 +421,9 @@ extension.
 The logic is implemented in file `Resources/Public/Javascript/schaufenster.searchfield.js`.
 
 
-![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
 
-![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf2.png)
+
+
 
 
 The search field consists of three parts:
@@ -434,10 +434,12 @@ The search field consists of three parts:
 
 ### Input field(s)
 Every field will configured in typoscript (setup.txt).
-
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf2.png)
 ### Input selector
 The original HTML element SELECT is difficult to style. Therefore we use a
 custome element following this instruction: https://www.w3schools.com/howto/howto_custom_select.asp 
 The handling of selector changes the visibility of input fields.
+
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
 
 ### Submit button
