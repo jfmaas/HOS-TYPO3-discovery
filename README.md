@@ -289,6 +289,12 @@ solr             hard    nproc           65000
 ```
 These lines above suppresses the warning at solr start.
 
+### Exposing and restricting access to Solr interface
+
+
+
+
+### Accessing Solr Web Interface
 
 
 
