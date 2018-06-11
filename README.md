@@ -418,6 +418,8 @@ extension.
 ### Searchfield
 
 
+The logic is implemented in file `Resources/Public/Javascript/schaufenster.searchfield.js`.
+
 The search field consists of three parts:
 
 * input field(s)
