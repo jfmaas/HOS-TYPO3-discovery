@@ -417,6 +417,7 @@ extension.
 
 ### Searchfield
 
+
 The search field consists of three parts:
 
 * input field(s)
@@ -425,3 +426,6 @@ The search field consists of three parts:
 
 ### Input field(s)
 
+### Input selector
+
+### Submit button
