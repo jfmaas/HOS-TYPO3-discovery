@@ -373,6 +373,18 @@ resp.
 sudo yum  install curl
 ```
 
+Next, download the installer:
+
+```
+sudo curl -s https://getcomposer.org/installer | php
+```
+
+and move the composer.phar file:
+
+```
+sudo mv composer.phar /usr/local/bin/composer
+```
+
 
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
