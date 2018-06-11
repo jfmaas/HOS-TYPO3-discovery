@@ -427,7 +427,11 @@ The search field consists of three parts:
 * submit button
 
 ### Input field(s)
+Every field will configured in typoscript (setup.txt).
 
 ### Input selector
+The original HTML element SELECT is difficult to style. Therefore we use a
+custome element following this instruction: https://www.w3schools.com/howto/howto_custom_select.asp 
+
 
 ### Submit button
