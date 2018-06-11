@@ -367,8 +367,10 @@ First we install curl by:
 sudo apt-get install curl
 ```
 
+resp.
+
 ```
-sudo apt-get install curl
+sudo yum  install curl
 ```
 
 
