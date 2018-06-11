@@ -62,10 +62,55 @@ Next we install apache. CentOS 7 ships with Apache 2.4. Apache is directly avail
 
 ```
 sudo yum -y install httpd
+```
+
+![](https://www.howtoforge.com/images/apache-php-mysql-lamp-centos-7-4/big/centos-apache-installation.png)
+
+Now configure your system to start Apache at boot time …
+
+```
+sudo systemctl start httpd.service
+sudo systemctl enable httpd.service
+```
+
+Next we install php7. The PHP version that ships with CentOS as default is quite old (PHP 5.4). Therefore I will show you in this chapter some options to install newer PHP versions like PHP 7.0 or 7.1 from Remi repository.
+
+```
+sudo rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+```
+
+Install yum-utils as we need the yum-config-manager utility.
+
+```
+sudo yum -y install yum-utils
+```
+
+and run yum update
+
+```
+sudo yum update
+```
+
+We can install PHP 7.1 and the Apache PHP 7.1 module as follows:
+
+```
+sudo yum-config-manager --enable remi-php71
+sudo yum -y install php php-opcache
+```
+
+We must restart Apache to apply the changes:
+
+```
+sudo systemctl restart httpd.service
+```
+
+Alternativly we can use the same command as UBUNTU:
 
 
-
-
+```
+sudo service httpd restart
+```
+ 
 
 ### TYPO3
 ### Extension find (subgoe)
