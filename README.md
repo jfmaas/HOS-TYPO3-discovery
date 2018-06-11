@@ -15,7 +15,7 @@ width=420 />
 ## Architecture
 ### LAMP
 
-#### Linux
+#### Linux / Package managers
 The project is tested on two Linux distributions:
 
 <img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
@@ -23,12 +23,15 @@ width=100 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.
 
 <img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png" width=100 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
-#### Apache
-v2.4.0
-#### mySQL
 
-#### PHP7
-v7.1.0
+Depending on linux distribution (ubuntu/centos) we use different package
+manager. 
+
+
+
+
+
+
 
 ### TYPO3
 ### Extension find (subgoe)
