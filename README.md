@@ -114,11 +114,15 @@ sudo service httpd restart
 Now we can test on both platforms the functionality with:
 
 ```
-sudo netstat -lnt
+sudo netstat -tnl
 ```
 
+You must see: 22, 80, 3306
 
+If the server is in internet you can test the (web-) server with your
+browser.
 
+------------------------------
 
  
 
