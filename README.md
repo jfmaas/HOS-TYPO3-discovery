@@ -28,8 +28,7 @@ width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https:
 Depending on linux distribution (ubuntu/centos) we use different package
 manager. 
 
-<img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
-width=20 /> ##### UBUNTU
+##### UBUNTU
 
 It is easy done:
 
@@ -40,8 +39,30 @@ sudo apt-get install apache2 libapache2-mod-php7.1 php7.1 php7.1-mysql mysql-ser
 
 ##### CENTOS
 
+First we install MariaDB. MariaDB is a MySQL fork of the original MySQL developer Monty Widenius. MariaDB is compatible with MySQL and I've chosen to use MariaDB here instead of MySQL. Run this command to install MariaDB with yum:
+
 ```
+sudo yum -y install mariadb-server mariadb
 ```
+
+Then we create the system startup links for MySQL (so that MySQL starts automatically whenever the system boots) and start the MySQL server:
+
+```
+sudo systemctl start mariadb.service
+sudo ystemctl enable mariadb.service
+```
+
+Set passwords for the MySQL root account:
+
+```
+sudo mysql_secure_installation
+```
+
+Next we install apache. CentOS 7 ships with Apache 2.4. Apache is directly available as a CentOS 7 package, therefore we can install it like this:
+
+```
+sudo yum -y install httpd
+
 
 
 
