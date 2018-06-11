@@ -277,7 +277,6 @@ sudo service solr stop
 sudo service solr restart
 ```
 
-
 ### TYPO3
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
