@@ -228,6 +228,54 @@ wget http://apache.org/dist/lucene/solr/7.3.1/solr-7.3.1.tgz
 ``` 
 You can see the available version under http://apache.org/dist/lucene/solr/
 
+Once the download is  completed, extract the service installation file with the following command:
+
+```
+tar xzf solr-`7.3.1.tgz solr-7.3.1/bin/install_solr_service.sh --strip-components=2
+
+```
+Install Solr as a service by running the following command:
+
+```
+sudo bash ./install_solr_service.sh solr-7.3.1.tgz
+```
+
+
+```
+We recommend installing the 'lsof' command for more stable start/stop of Solr
+
+Extracting solr-7.3.1.tgz to /opt
+
+Installing symlink /opt/solr -> /opt/solr-7.3.1 ...
+
+Installing /etc/init.d/solr script ...
+
+Installing /etc/default/solr.in.sh ...
+
+Service solr installed.
+Customize Solr startup configuration in /etc/default/solr.in.sh
+NOTE: Please install lsof as this script needs it to determine if Solr is listening on port 8983.
+
+Started Solr server on port 8983 (pid=6426). Happy searching!
+
+Found 1 Solr nodes:
+
+Solr process 6426 running on port 8983
+{
+ "solr_home":"/var/solr/data",
+ "version":"7.3.1 a66a44513ee8191e25b477372094bfa846450316 - shalin - 2018-11-02 19:52:42",
+ "startTime":"2016-11-30T06:49:18.927Z",
+ "uptime":"0 days, 0 hours, 0 minutes, 18 seconds",
+ "memory":"85.4 MB (%17.4) of 490.7 MB"}
+```
+
+You can start|stop|restart the Solr service with the following commands:
+
+```
+sudo service solr start
+sudo service solr stop
+sudo service solr restart
+```
 
 
 ### TYPO3
