@@ -420,6 +420,12 @@ extension.
 
 The logic is implemented in file `Resources/Public/Javascript/schaufenster.searchfield.js`.
 
+
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
+
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf2.png)
+
+
 The search field consists of three parts:
 
 * input field(s)
