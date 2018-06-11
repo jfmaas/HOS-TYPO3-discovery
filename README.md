@@ -28,8 +28,8 @@ width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https:
 Depending on linux distribution (ubuntu/centos) we use different package
 manager. 
 
-##### <img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
-width=20 /> UBUNTU
+<img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
+width=20 /> ##### UBUNTU
 
 It is easy done:
 
