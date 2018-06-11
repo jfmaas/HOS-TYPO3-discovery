@@ -179,17 +179,25 @@ sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 8M/' /etc/php/7.0/
 ```
 This make sense for both distributions.
 
-
 With this step the LAMP install is finished on both platforms.
 
 ------------------------------
 
 ### Solr installation
 
-#### UBUNTU 
+#### UBUNTU
+
+First, we should install the Java JDK. 
+
+```
+sudo apt-get -y install openjdk-8-jdk 
+sudo mkdir /usr/java
+sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64 /usr/java/default
+```
 
 
 
+#### CENTOS
  
 
 ### TYPO3
