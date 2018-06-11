@@ -281,6 +281,8 @@ sudo service solr restart
 
 In `/etc/security/limits.conf` you can add these lines:
 
+<img src="https://www.maketecheasier.com/assets/uploads/2014/02/nano-editor-800px.jpg"
+width=80 />
 ```
 solr             soft    nofile          500000
 solr             hard    nofile          500000
