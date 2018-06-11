@@ -291,8 +291,23 @@ These lines above suppresses the warning at solr start.
 
 ### Exposing and restricting access to Solr interface
 
+Because of firewall/load balancer restrictions we have hidden the solr admin
+interface (port 8983) behind a reverse proxy relized in apache and
+additionally we could realize an access restriction.
+
+Inside the folder `/etc/httpd/sites-available` we have created a file
+`solrproxy.conf` with the content below:
+
+```
 
 
+``` 
+
+A symbol link to `sites-enabled` activates the configuration:
+
+```
+ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf 
+```
 
 ### TYPO3
 ### Extension find (subgoe)
