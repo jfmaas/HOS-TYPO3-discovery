@@ -294,10 +294,6 @@ These lines above suppresses the warning at solr start.
 
 
 
-### Accessing Solr Web Interface
-
-
-
 ### TYPO3
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
