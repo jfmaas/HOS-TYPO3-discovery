@@ -409,3 +409,7 @@ Options:
 ### Extension find (subgoe)
 ### Extension discovery (subhh) 
 
+## Architecture
+
+The Discovery app uses an extended version of subugoe/find. The most
+functionalities are realized with Javascript.
