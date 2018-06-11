@@ -299,8 +299,48 @@ Inside the folder `/etc/httpd/sites-available` we have created a file
 `solrproxy.conf` with the content below:
 
 ```
+<VirtualHost *:80>
+    # 212.1.41.47
+    ServerAdmin netadmin@sub.uni-hamburg.de
+    ServerName hosindex.openscience.hamburg.de
+    <Directory />
+        Options +FollowSymLinks
+       AllowOverride None
+    </Directory>
+   
+     <Proxy /solrAdmin >
+        Require all granted
+     </Proxy>
+    
+     <Proxy /solrQuery >
+        Require all granted
+     </Proxy>
+
+     <Location /solrAdmin/>
+	AuthType Basic
+	AuthName "Restricted Area"
+	AuthBasicProvider file
+	AuthUserFile "/etc/httpd/.htpassword"
+	Require user solr
+     </Location>	
 
 
+     <Location /api/>                 
+        AuthType Basic
+        AuthName "Restricted API"  
+        AuthBasicProvider file
+        AuthUserFile "/etc/httpd/.htpassword"
+        Require user api 
+     </Location>  
+
+			
+     ProxyPreserveHost On
+     ProxyRequests Off   
+
+     ProxyPass /solrAdmin  http://localhost:8983/solr
+     ProxyPassReverse /solrAdmin http://localhost:8983/solr
+     		
+</VirtualHost>
 ``` 
 
 A symbol link to `sites-enabled` activates the configuration:
