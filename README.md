@@ -412,4 +412,4 @@ Options:
 ## Architecture
 
 The Discovery app uses an extended version of subugoe/find. The most
-functionalities are realized with Javascript.
+facet functionalities are realized with Javascript.
