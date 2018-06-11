@@ -25,7 +25,7 @@ width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.r
 width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
 
-First we can test if apache is already instaleld by:
+First we can test if apache is already installed by:
 
 ```
 sudo netstat -tnl 
