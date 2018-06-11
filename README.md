@@ -279,6 +279,15 @@ sudo service solr restart
 
 ### Increasing of performance
 
+In `/etc/security/limits.conf` you can add these lines:
+
+```
+solr             soft    nofile          500000
+solr             hard    nofile          500000
+solr             soft    nproc           65000
+solr             hard    nproc           65000
+```
+These lines above suppresses the warning at solr start.
 
 
 
