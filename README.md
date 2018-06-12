@@ -27,7 +27,7 @@ width=420 />
 ## Architecture
 ### LAMP
 
-The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration and [package managing](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg). Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum]().
+The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration and [package managing](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg). Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7).
 
 #### Linux / Package managers
 The project is tested on two Linux distributions:
