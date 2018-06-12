@@ -552,4 +552,4 @@ The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all su
 
 ###  
 
-
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png)
