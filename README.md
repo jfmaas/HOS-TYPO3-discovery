@@ -7,22 +7,22 @@ Here some screenshots:
 __Search with autocompleting__ 
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss01.png"
-width=420 /> 
+width=620 /> 
 
 __Heatmap with geolocations__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss02.png"
-width=420 /> 
+width=620 /> 
 
 __Interactive DDC tree__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss03.png"
-width=420 /> 
+width=620 /> 
 
 __Wordcloud of subjects__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss04.png"
-width=420 />
+width=620 />
 
 ## Architecture
 ### LAMP
