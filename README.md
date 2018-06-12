@@ -27,7 +27,7 @@ width=420 />
 ## Architecture
 ### LAMP
 
-The architecture is based on LAMP (Linux.Apache.mySQL.PHP)
+The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunatally
 #### Linux / Package managers
 The project is tested on two Linux distributions:
 
