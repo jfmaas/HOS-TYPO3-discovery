@@ -502,4 +502,4 @@ and a big version in a lightbox overlay:
  
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap2.png" width=800 />
 
-As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology.  
+As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology. The world map is divided in a fixed raster of tiles (in most cases 256x256px) for all zoom levels. An other technology (wms) renders the maps in real time on server.   
