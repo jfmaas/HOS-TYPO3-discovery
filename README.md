@@ -47,7 +47,10 @@ First we can test if apache is already installed by:
 
 ```
 sudo netstat -tnl 
+sudo service httpd status
 ```
+
+
 
 
 Depending on linux distribution (ubuntu/centos) we use different package
