@@ -558,6 +558,6 @@ The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publi
 
 ### DDC as tree
 
-  
+The script  `/Resources/Public/Javascript/schaufenster.ddc.js`  
 
 
