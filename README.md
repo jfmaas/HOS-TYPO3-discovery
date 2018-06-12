@@ -502,4 +502,4 @@ and a big version in a lightbox overlay:
  
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap2.png" width=800 />
 
-As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map).  
+As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology.  
