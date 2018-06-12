@@ -554,4 +554,10 @@ The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all su
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png" width="400" title="Creators" />
 
+The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the oold DOM will substitude with the new one.
+
+### DDC as tree
+
+  
+
 
