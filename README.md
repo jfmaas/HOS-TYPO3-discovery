@@ -493,6 +493,6 @@ Clicking of Submit button submitts the form.
 
 ### Heatmap with geolocation of publications
 
-Obvously There are more then one render modes. The most known is 
+Obviously the solr query generates more hits There are more then one render modes. The most known is 
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
