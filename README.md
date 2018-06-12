@@ -9,14 +9,17 @@ __Search with autocompleting__
 width=420 /> 
 
 __Heatmap with geolocations__
+
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss02.png"
 width=420 /> 
 
-__Interactive DDC tree     __
+__Interactive DDC tree__
+
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss03.png"
 width=420 /> 
 
-__Wordcloud of subjects    __
+__Wordcloud of subjects__
+
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss04.png"
 width=420 />
 
