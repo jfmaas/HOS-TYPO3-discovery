@@ -29,6 +29,8 @@ width=420 />
 
 The architecture is based on [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) 
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/800px-LAMP_software_bundle.svg.png)
+
 Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration and [package managing](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg). Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7).
 
 #### Linux / Package managers
