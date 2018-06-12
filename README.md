@@ -498,5 +498,8 @@ Obviously the solr query generates more hits then a common map api can procede. 
 The UI has two parts: a "thumbnail" in facet column 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
 
-and a big version in a lightbox overlay.  
+and a big version in a lightbox overlay:
+ 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap2.png" width=800 />
+
+As API the project uses  
