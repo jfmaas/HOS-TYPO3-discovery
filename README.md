@@ -552,4 +552,6 @@ The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all su
 
 ### Creators as Dounut  
 
-<img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png" width=400 />
+<img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png" width="400" title="Creators" />
+
+
