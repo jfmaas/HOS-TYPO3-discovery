@@ -554,11 +554,11 @@ The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all su
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png" width="400" title="Creators" />
 
-The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the oold DOM will substitude with the new one.
+The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the old DOM will substitude with the new one.
 
 ### DDC as (file-) tree
 
-
+[Dublin Core](https://en.wikipedia.org/wiki/Dublin_Core) is a classification system for libraries
 
 [DDC](https://github.com/subhh/HOS-TYPO3-discovery/blob/master/Resources/Public/ddc_de.js)
 
