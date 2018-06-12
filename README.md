@@ -491,6 +491,8 @@ The handling of selector changes the visibility of input fields. After changing 
 #### Submit button
 Clicking of Submit button submitts the form.
 
-### Heatmap with geolocation  of publications
+### Heatmap with geolocation of publications
 
-![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png)
+
+
+<img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
