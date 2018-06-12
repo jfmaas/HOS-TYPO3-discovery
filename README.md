@@ -544,7 +544,11 @@ width=80 />
     ProxyPassReverse /Cloud/  https://cdnjs.cloudflare.com/
 </VirtualHost>
 ```
- 
+### Wordcloud with subjects
+
+![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/wc.png)
+
+
 
 
 
