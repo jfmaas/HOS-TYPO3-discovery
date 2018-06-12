@@ -548,7 +548,7 @@ width=80 />
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/wc.png)
 
-
+The script `/`
 
 
 
