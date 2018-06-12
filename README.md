@@ -505,4 +505,14 @@ and a big version in a lightbox overlay:
 
 As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology. The world map is divided in a fixed raster of tiles (in most cases 256x256px) for all zoom levels. An other technology ([wms](https://en.wikipedia.org/wiki/Web_Map_Service)) renders the maps in real time on server. The most modern technology solution realizes the rendering on client and only vector data will transfered from server to client.
 
-Since end of may 2018 in europe the General Data Protection Regulation is active. In most cases the tiles comes from a remote server, because the storing of tiles costs a lot of harddisc space on server.  For avoiding exposing the IP numbers of browser to the tile provider we use a reverse proxy to tunnel the tiles. 
+Since end of may 2018 in europe the General Data Protection Regulation is active. In most cases the tiles comes from a remote server, because the storing of tiles costs a lot of harddisc space on server.  For avoiding exposing the IP numbers of browser to the tile provider we use a reverse proxy to tunnel the tiles.
+
+<img src="https://goodlogo.com/images/logos/apache_software_foundation_logo_3074.gif"
+width=80 />
+
+```
+
+```
+ 
+
+
