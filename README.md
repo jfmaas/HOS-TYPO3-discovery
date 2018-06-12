@@ -493,6 +493,6 @@ Clicking of Submit button submitts the form.
 
 ### Heatmap with geolocation of publications
 
-Obviously the solr query generates more hits There are more then one render modes. The most known is 
+Obviously the solr query generates more hits then a common map api can procede. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have 
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
