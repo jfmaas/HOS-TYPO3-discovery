@@ -548,7 +548,6 @@ width=80 />
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/wc.png)
 
-The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all subjects from facet and substitudes the old DOM part with the new one. The used d3 library is a singleton, therefore you cannot instanciate
-
+The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all subjects from facet and substitudes the old DOM part with the new one. The used d3 library is a singleton. Therefore it is not possible to realize both (small and large one) in same name space. 
 
 
