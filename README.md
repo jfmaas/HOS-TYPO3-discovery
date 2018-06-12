@@ -27,7 +27,8 @@ width=420 />
 ## Architecture
 ### LAMP
 
-The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunatally
+The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration. Ubuntu uses apt_get, CENTOS uses yum.
+
 #### Linux / Package managers
 The project is tested on two Linux distributions:
 
