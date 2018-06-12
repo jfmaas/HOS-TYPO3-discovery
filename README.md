@@ -511,7 +511,35 @@ Since end of may 2018 in europe the General Data Protection Regulation is active
 width=80 />
 
 ```
-
+<VirtualHost *:80>
+    ServerAdmin netadmin@sub.uni-hamburg.de
+    ServerName openscience.hamburg.de
+    <Directory />
+        Options +FollowSymLinks
+       AllowOverride None
+    </Directory>
+    <Directory /var/www/html/schaufenster >
+        Options +FollowSymLinks
+       AllowOverride None
+	 Require all granted
+    </Directory>
+    DocumentRoot /var/www/html/schaufenster
+    DirectoryIndex index.html index.php   
+	ProxyPreserveHost On
+	ProxyRequests Off
+    
+    # Thumbnail tiles: 
+    ProxyPass /ArcGIS/  https://server.arcgisonline.com/
+    ProxyPassReverse /ArcGIS https://server.arcgisonline.com/
+    
+    # Blackwhite map:
+    ProxyPass /Stamen  https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/
+    ProxyPassReverse /Stamen/  https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/
+    
+    # Assets from cloud:
+    ProxyPass /Cloud/  https://cdnjs.cloudflare.com/
+    ProxyPassReverse /Cloud/  https://cdnjs.cloudflare.com/
+</VirtualHost>
 ```
  
 
