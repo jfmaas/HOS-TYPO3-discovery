@@ -495,4 +495,6 @@ Clicking of Submit button submitts the form.
 
 Obviously the solr query generates more hits then a common map api can procede. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have only a couple of geo locations but a big number of hits on one location. In this case a heatmap is a good solution. The model consists of a collection of geolocations with optional value for every location. 
 
+The UI has two parts: a "thumbnail" in facet column and a big  
+
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
