@@ -47,16 +47,48 @@ First we can test if apache is already installed by:
 
 ```
 sudo netstat -tnl 
-sudo service httpd status
 ```
 
+Or more verbose with:
 
+```
+sudo service httpd status 
+````
+Or on UBUNTU with:
 
+```
+sudo service apache2 status 
+```
 
+With this result:
+
+```
+rainer@hosdev:~/ext/schaufenster$ sudo service apache2 status
+● apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2; bad; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: active (running) since Thu 2018-04-19 14:41:52 CEST; 1 months 23 days ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 58596 ExecReload=/etc/init.d/apache2 reload (code=exited, status=0/SUCCESS)
+    Tasks: 7
+   Memory: 125.5M
+      CPU: 1h 21min 7.678s
+   CGroup: /system.slice/apache2.service
+           ├─40335 /usr/sbin/apache2 -k start
+           ├─58661 /usr/sbin/apache2 -k start
+           ├─58665 /usr/sbin/apache2 -k start
+           ├─58666 /usr/sbin/apache2 -k start
+           ├─58667 /usr/sbin/apache2 -k start
+           ├─58668 /usr/sbin/apache2 -k start
+           └─59395 /usr/sbin/apache2 -k start
+```
+
+### Installing of apache2, mySQL, Hypertext Preprocessor
 Depending on linux distribution (ubuntu/centos) we use different package
-manager. 
+manager. The [current version](http://de2.php.net/downloads.php) (2018-06-12) is 7.2.6. For our project use PHP7.1 
 
-##### UBUNTU
+**UBUNTU**
 
 It is easy done:
 
@@ -70,7 +102,7 @@ have to configure mysql by creating users:
 ```
 mysql -u root -p
 ```
-During this act you have to create an user.
+During this step you have to create an user.
 
 Next:
 
@@ -87,7 +119,7 @@ quit;
 
 ##### CENTOS
 
-First we install MariaDB. MariaDB is a MySQL fork of the original MySQL developer Monty Widenius. MariaDB is compatible with MySQL and I've chosen to use MariaDB here instead of MySQL. Run this command to install MariaDB with yum:
+First we install MariaDB. MariaDB is a MySQL fork of the original MySQL developer Monty Widenius. MariaDB is compatible with MySQL and We've chosen to use MariaDB here instead of MySQL. Run this command to install MariaDB with yum:
 
 ```
 sudo yum -y install mariadb-server mariadb
@@ -97,7 +129,7 @@ Then we create the system startup links for MySQL (so that MySQL starts automati
 
 ```
 sudo systemctl start mariadb.service
-sudo ystemctl enable mariadb.service
+sudo systemctl enable mariadb.service
 ```
 
 Set passwords for the MySQL root account:
@@ -432,18 +464,11 @@ Options:
 
 ## Architecture
 
-The Discovery app uses an extended version of subugoe/find. The most
-facet functionalities are realized with Javascript inside schaufenster
-extension.
+The Discovery app uses an extended version of subugoe/find. The most facet functionalities are realized with Javascript inside schaufenster extension.
 
 ### Searchfield
 
-
 The logic is implemented in file `Resources/Public/Javascript/schaufenster.searchfield.js`.
-
-
-
-
 
 
 
@@ -453,14 +478,18 @@ The search field consists of three parts:
 * input selector
 * submit button
 
-### Input field(s)
+#### Input field(s)
 Every field will configured in typoscript (setup.txt).
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf2.png)
-### Input selector
+#### Input selector
 The original HTML element SELECT is difficult to style. Therefore we use a
 custome element following this instruction: https://www.w3schools.com/howto/howto_custom_select.asp 
-The handling of selector changes the visibility of input fields.
+The handling of selector changes the visibility of input fields. After changing of focus the recent field will emptied. After reload the selector will preselected. 
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
 
-### Submit button
+#### Submit button
+Clicking of Submit button submitts the form.
+
+### Heatmap with geolocation  of publications
+
