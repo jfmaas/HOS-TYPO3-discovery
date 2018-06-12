@@ -1,7 +1,7 @@
 {
     "name": "subhh/schaufenster",
     "type": "typo3-cms-extension",
-    "description": "My description comes here",
+    "description": "Hamburg Open Science",
     "homepage": "https://example.com",
     "license": ["GPL-2.0+"],
     "keywords": ["TYPO3 CMS", "typo3find schaufenster HamburgOpenScience"],
