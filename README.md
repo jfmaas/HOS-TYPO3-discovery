@@ -514,15 +514,18 @@ width=80 />
 <VirtualHost *:80>
     ServerAdmin netadmin@sub.uni-hamburg.de
     ServerName openscience.hamburg.de
+    
     <Directory />
-        Options +FollowSymLinks
+       Options +FollowSymLinks
        AllowOverride None
     </Directory>
+    
     <Directory /var/www/html/schaufenster >
-        Options +FollowSymLinks
+       Options +FollowSymLinks
        AllowOverride None
-	 Require all granted
+	   Require all granted
     </Directory>
+    
     DocumentRoot /var/www/html/schaufenster
     DirectoryIndex index.html index.php   
 	ProxyPreserveHost On
