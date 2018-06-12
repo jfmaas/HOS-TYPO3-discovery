@@ -558,7 +558,9 @@ The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publi
 
 ### DDC as (file-) tree
 
-The facet ddc contains only the numbers.
+[DDC](https://github.com/subhh/HOS-TYPO3-discovery/blob/master/Resources/Public/ddc_de.js)
+
+The facet ddc contains only the numbers. 
 
 The script  `/Resources/Public/Javascript/schaufenster.ddc.js`  
 
