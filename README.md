@@ -27,7 +27,7 @@ width=420 />
 ## Architecture
 ### LAMP
 
-The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration. Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses yum.
+The architecture is based on LAMP (Linux.Apache.mySQL.PHP). Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration. Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum]().
 
 #### Linux / Package managers
 The project is tested on two Linux distributions:
