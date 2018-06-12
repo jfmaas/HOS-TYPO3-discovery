@@ -556,7 +556,7 @@ The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all su
 
 The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the oold DOM will substitude with the new one.
 
-### DDC as tree
+### DDC as (file) tree
 
 The script  `/Resources/Public/Javascript/schaufenster.ddc.js`  
 
