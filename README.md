@@ -560,7 +560,7 @@ The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publi
 
 The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small set of vocabulary terms that can be used to describe digital resources (video, images, web pages, etc.), as well as physical resources such as books or CDs, and objects like artworks. The [first 3 levels](https://github.com/subhh/HOS-TYPO3-discovery/blob/master/Resources/Public/ddc_de.js) are licencefree.
 
-The facet ddc contains only the numbers. The resolving of this numbers to lables will proceded in Javascript layer. 
+The facet ddc contains only the numbers. The resolving of this numbers to lables will proceded in Javascript layer. Server delivers a simple list, this list will transform in a tree model.
 
 The script  `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part with facets into a graphical tree.    
 
