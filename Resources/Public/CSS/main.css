@@ -181,13 +181,16 @@ dd li,dd ul {
   margin-top: 0!important;
   margin-bottom: 0!important;
 }
-
-.facets h3 {display:none}
-iframe,.webui-popover-content,webui-popover
-{padding:0!important;overflow:hidden!important}
-.tx_find article.facet h1, .tx_find .facet-type-Tabs h1
-{text-transform:none!important}
-
+.facets h3 {
+  display:none
+}
+iframe,.webui-popover-content,webui-popover {
+  padding:0!important;
+  overflow:hidden!important
+}
+.tx_find article.facet h1, .tx_find .facet-type-Tabs h1 {
+  text-transform : none!important
+}
 .ce-textpic {background-color:white;padding:0 0 0 10px}
 
 
