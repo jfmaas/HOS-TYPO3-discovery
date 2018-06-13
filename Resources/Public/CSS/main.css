@@ -90,14 +90,9 @@
     cursor: pointer;
     text-transform: lowercase;
 }
-
 .icon-right-open::before {
-
     content: '|'!important;
-
 }
-
-
 .tx_find .results ol.resultList {
   margin: 0  0 0  300px!important;
   padding-right: 3em;
