@@ -1,6 +1,7 @@
 page = PAGE
 page.100 < styles.content.get
 config.contentObjectExceptionHandler = 0
+
 plugin.tx_find.settings {
         connections {
            default {
@@ -8,22 +9,22 @@ plugin.tx_find.settings {
                   host = localhost
                   port = 8983
                   path = /solr/ediss_1.0.19
+             }
           }
-            }
         }
         standardFields {
           title = title
           snippet = creatorName
-	  extra = resourceType
+	        extra = resourceType
         }
         queryFields {
-	0 {
+	      0 {
                 id = all
                 noescape = 1
                 type = Text
                 query={!type=dismax qf='title^2.0 subject creatorName'}(%s*)
 		autocomplete = 1
-          }         
+          }
  	1 {
                 id = titles
                 noescape = 1
@@ -82,7 +83,7 @@ plugin.tx_find.settings {
               fetchMaximum=1000
               barWidth=10
           }
-        
+
           15 {
             id = Karte
             field = geoLocationPoint
@@ -124,7 +125,7 @@ plugin.tx_find.settings {
              query = (creatorName:"%s")
              field = creatorName
           }
-        
+
 
           45 {
              id = resourceType
@@ -133,20 +134,11 @@ plugin.tx_find.settings {
           }
 	  50 {
    		id=Geolocation
-		field =geoLocationPoint
-	hidden = 1	
-		query=(geoLocationPoint:%s)
-	   }	
+		  field =geoLocationPoint
+	    hidden = 1
+		  query=(geoLocationPoint:%s)
+	 }
 
-         # 50 {
-	 #    id = titleAlternative
-	 #    field= titleAlternative
-	 # }
-
-	 # 55 {
-	 #     id=subject_bk
-         #     field=subject_bk
-	#	} 
         }
 
       }
@@ -158,9 +150,6 @@ page.includeJS {
 
     6=EXT:schaufenster/Cloud/ajax/libs/flot/0.8.3/jquery.flot.js
     7=EXT:schaufenster/Cloud/ajax/libs/flot/0.8.3/jquery.flot.selection.js
-
-
-
     8=EXT:schaufenster/Cloud/ajax/libs/jqueryui/1.12.1/jquery-ui.js
     9=EXT:schaufenster/Cloud/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.js
     10=EXT:schaufenster/Cloud/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js
@@ -174,18 +163,18 @@ page.includeJS {
     18=EXT:schaufenster/Resources/Public/Javascript/d3.wordcloud.js
     19=EXT:schaufenster/Resources/Public/Javascript/tree.jquery.js
     20=EXT:schaufenster/Cloud/ajax/libs/jstree/3.2.1/jstree.min.js
-    29=EXT:schaufenster/Cloud/ajax/libs/bodymovin/4.13.0/bodymovin.js   
+    29=EXT:schaufenster/Cloud/ajax/libs/bodymovin/4.13.0/bodymovin.js
     30=EXT:schaufenster/Resources/Public/Javascript/schaufenster.js
-    31=EXT:schaufenster/Resources/Public/Javascript/schaufenster.searchfield.js	
+    31=EXT:schaufenster/Resources/Public/Javascript/schaufenster.searchfield.js
     32=EXT:schaufenster/Resources/Public/Javascript/schaufenster.ddc.js
-    33=EXT:schaufenster/Resources/Public/Javascript/schaufenster.wordcloud.js    
-    34=EXT:schaufenster/Resources/Public/Javascript/schaufenster.heatmap.js    
-    35=EXT:schaufenster/Resources/Public/Javascript/schaufenster.publisher.js    
-    39=EXT:find/Resources/Public/JavaScript/geohash.js  
+    33=EXT:schaufenster/Resources/Public/Javascript/schaufenster.wordcloud.js
+    34=EXT:schaufenster/Resources/Public/Javascript/schaufenster.heatmap.js
+    35=EXT:schaufenster/Resources/Public/Javascript/schaufenster.publisher.js
+    39=EXT:find/Resources/Public/JavaScript/geohash.js
     40=EXT:find/Resources/Public/JavaScript/find.js
 }
 page.includeCSS {
-	4=EXT:schaufenster/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.css   
+	4=EXT:schaufenster/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.css
 	5=EXT:schaufenster/Cloud/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 	6=EXT:schaufenster/Cloud/ajax/libs/jqueryui/1.12.1/jquery-ui.css
 	7=EXT:schaufenster/Cloud/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css
