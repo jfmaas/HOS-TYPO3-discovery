@@ -306,11 +306,13 @@
 	color: #333;
 	background: #fff;
 	}
+
 .leaflet-control-layers-selector {
 	margin-top: 2px;
 	position: relative;
 	top: 1px;
 	}
+
 .leaflet-control-layers label {
 	display: block;
 	}
