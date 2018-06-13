@@ -12,18 +12,17 @@
   width:275px!important
 }
 
-
 #c3  {
  text-align:left;
  padding: 0 0 0 25px;
  font-size:22px;
  top:0;
  z-index:99999;
- position: -webkit-sticky; /* Safari */
- position:sticky;
+ position: -webkit-sticky;
+ position : sticky;
  color:white!important;
  border-radius:3px;
- margin:-30px 0 0 0px;
+ margin:-30px 0 0 0;
  background-color:darkblue;
 }
 
