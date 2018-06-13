@@ -227,9 +227,6 @@
 	border-bottom: none;
 	}
 
-
-/* zoom control */
-
 .leaflet-container .leaflet-control-zoom {
 	margin-left: 13px;
 	margin-top: 12px;
