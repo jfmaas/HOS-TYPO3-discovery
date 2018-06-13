@@ -7,14 +7,11 @@
 }
 
 .tx_find .facets {
-float:left!important;
-clear:left!important;
-width:275px!important
+  float:left!important;
+  clear:left!important;
+  width:275px!important
 }
 
-.top {
-  display: none
-}
 
 #c3  {
  text-align:left;
@@ -30,7 +27,9 @@ width:275px!important
  background-color:darkblue;
 }
 
-#c3 p,#c3 a{color:white}
+#c3 p,#c3 a{
+  color:white
+}
 
 .heatmapContainer {
    border:1px black solid!important;
