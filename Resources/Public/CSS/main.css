@@ -43,13 +43,15 @@
   display:none!important
  }
 
-.formFields {margin-top:3px!important}
- .fieldContainer .inputContainer   {
+.formFields {
+  margin-top:3px!important
+}
+.fieldContainer .inputContainer   {
    margin-bottom:0!important;
- }
-.tx_find article.facet a, .tx_find .facet-type-Tabs a
- {display:inline!important}
-
+}
+.tx_find article.facet a, .tx_find .facet-type-Tabs a {
+  display:inline!important
+}
 .inputType-text {
     width: 340px;
     line-height: 17.5px;
@@ -62,12 +64,10 @@
     color: darkblue!important;
     margin: 2px 10px 0 0;
 }
-
 .tx_find form .submit {
   height:42px!important;
   margin: 5px 0 0 0!important
 }
-
 .controls select {
     border-radius: 6px;
     padding: 10px 12px 10px 2px;
