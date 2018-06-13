@@ -10,7 +10,9 @@ clear:left!important;
 width:275px!important
 }
 
-.top {display: none}
+.top {
+  display: none
+}
 
 #c3  {
  text-align:left;
@@ -40,7 +42,7 @@ width:275px!important
   display:none!important
  }
 
-.formFields {margin-top:3px!important} 
+.formFields {margin-top:3px!important}
  .fieldContainer .inputContainer   {
    margin-bottom:0!important;
  }
@@ -62,7 +64,7 @@ width:275px!important
 
 .tx_find form .submit {
   height:42px!important;
-  margin: 5px 0 0 0!important  
+  margin: 5px 0 0 0!important
 }
 
 .controls select {
@@ -173,7 +175,7 @@ dl {
         margin-top: 15px;
         color:white
  }
- 
+
  /* roboto-condensed-regular - latin_latin-ext */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -188,9 +190,9 @@ dl {
        url('../Fonts/roboto-condensed-v16-latin_latin-ext-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
 }
 
- 
- 
- 
+
+
+
 
 .tx_find dd  {
   margin-top: 0!important;
@@ -208,7 +210,7 @@ iframe,.webui-popover-content,webui-popover
 
 /** CSS for AUROCOMPLETER */
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover 
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover
 {
   border: 1px solid #000;
   background:darkblue;
@@ -216,7 +218,7 @@ iframe,.webui-popover-content,webui-popover
 
 
 /* =================================================*/
- /* ******   CSS for SELECTOR 
+ /* ******   CSS for SELECTOR
  the container must be positioned relative:*/
 .custom-select {
   position: relative;
@@ -267,7 +269,7 @@ iframe,.webui-popover-content,webui-popover
 }
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
-} 
+}
 
 .toast{ position:fixed;bottom:0;left:0;right:0;margin:0 auto;display:table;margin:1.5rem auto;padding:1.5rem 2rem;width:500px;-webkit-transform:translateY(200%);-ms-transform:translateY(200%);transform:translateY(200%);-webkit-transition:0.5s all;transition:0.5s
 all;opacity:0;background:darkblue}
@@ -277,4 +279,4 @@ all;opacity:0;background:darkblue}
 .toast .toast-button:hover{background:#514951;}
 .toast .toast-button:active{background:#6b626b;}
 .toast-text {color:white}
-.toast-button, .toast-close {color:silver} 
+.toast-button, .toast-close {color:silver}
