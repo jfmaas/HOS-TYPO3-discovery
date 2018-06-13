@@ -161,9 +161,9 @@ dd li,dd ul {
     list-style-type: none;
 }
 .awesome-marker svg {
-        font-size: 14px;
-        margin-top: 15px;
-        color:white
+    font-size: 14px;
+    margin-top: 15px;
+    color:white
 }
 
  /* roboto-condensed-regular - latin_latin-ext */
