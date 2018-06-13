@@ -284,15 +284,18 @@
 	-webkit-border-radius: 8px;
 	        border-radius: 8px;
 	}
+
 .leaflet-control-layers-toggle {
 	background-image: url(images/layers.png);
 	width: 36px;
 	height: 36px;
 	}
+
 .leaflet-touch .leaflet-control-layers-toggle {
 	width: 44px;
 	height: 44px;
 	}
+
 .leaflet-control-layers .leaflet-control-layers-list,
 
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
