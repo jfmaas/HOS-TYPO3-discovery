@@ -102,7 +102,6 @@
    margin-top: -3.6em;
    margin-left: 0.5em
 }
-
 a {
     color: darkblue;
 }
@@ -110,7 +109,6 @@ a:link, a:visited {
     color: darkblue;
     text-decoration: none;
 }
-
 body {
     margin:0;
     padding:0;
