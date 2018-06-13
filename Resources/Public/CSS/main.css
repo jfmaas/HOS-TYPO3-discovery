@@ -147,7 +147,7 @@ dt {
     text-align: right;
     font-weight: bold;
     color: darkred;
-  }
+}
   dt::after {
     content: ": ";
   }
