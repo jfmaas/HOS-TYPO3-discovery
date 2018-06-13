@@ -367,11 +367,15 @@
 	}
 
 .leaflet-touch .leaflet-control-attribution,
+
 .leaflet-touch .leaflet-control-layers,
+
 .leaflet-touch .leaflet-control-zoom {
 	box-shadow: none;
 	}
+
 .leaflet-touch .leaflet-control-layers,
+
 .leaflet-touch .leaflet-control-zoom {
 	border: 4px solid rgba(0,0,0,0.3);
 	}
