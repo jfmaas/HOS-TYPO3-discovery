@@ -383,6 +383,7 @@
 	position: absolute;
 	text-align: center;
 	}
+
 .leaflet-popup-content-wrapper {
 	padding: 1px;
 	text-align: left;
@@ -406,7 +407,7 @@
 	position: relative;
 	overflow: hidden;
 	}
-	
+
 .leaflet-popup-tip {
 	width: 15px;
 	height: 15px;
