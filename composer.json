@@ -2,7 +2,7 @@
     "name": "subhh/schaufenster",
     "type": "typo3-cms-extension",
     "description": "Hamburg Open Science",
-    "homepage": "https://example.com",
+    "homepage": "https://github.com/subhh/HOS-TYPO3-discovery/commits?author=AppWerft",
     "license": ["GPL-2.0+"],
     "keywords": ["TYPO3 CMS", "typo3find schaufenster HamburgOpenScience"],
     "support": {
