@@ -389,13 +389,16 @@
 	-webkit-border-radius: 20px;
 	        border-radius: 20px;
 	}
+
 .leaflet-popup-content {
 	margin: 14px 20px;
 	line-height: 1.4;
 	}
+
 .leaflet-popup-content p {
 	margin: 18px 0;
 	}
+
 .leaflet-popup-tip-container {
 	margin: 0 auto;
 	width: 40px;
@@ -403,6 +406,7 @@
 	position: relative;
 	overflow: hidden;
 	}
+	
 .leaflet-popup-tip {
 	width: 15px;
 	height: 15px;
@@ -447,9 +451,6 @@
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #ddd;
 	}
-
-
-/* div icon */
 
 .leaflet-div-icon {
 	background: #fff;
