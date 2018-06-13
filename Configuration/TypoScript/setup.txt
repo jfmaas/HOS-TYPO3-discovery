@@ -41,24 +41,21 @@ plugin.tx_find.settings {
 		        autocomplete = 1
           }
 	        3 {
-                id = subjects
-                noescape = 1
-                type = Text
-		hidden=0
-                query=(subject:%s*)
-		autocomplete = 1
- //              autocompleteDictionary=title
-           }
-   4 {
-                id = publishers
-                noescape = 1
-                type = Text
-                hidden=0
-                query=(publisher:*%s*)
-                autocomplete = 0
-           }
-
-
+            id = subjects
+            noescape = 1
+            type = Text
+		        hidden=0
+            query=(subject:%s*)
+		        autocomplete = 1
+          }
+          4 {
+            id = publishers
+            noescape = 1
+            type = Text
+            hidden=0
+            query=(publisher:*%s*)
+            autocomplete = 0
+         }
         }
         paging {
             perPage = 66
@@ -66,86 +63,74 @@ plugin.tx_find.settings {
             detailPagePaging = 1
         }
         facets {
-  	 35 {
+  	     35 {
             id=Collection
             displayDefault = 3
             query = (collection:"%s")
             field = collection
           }
-
-           5 {
+        5 {
               id = Erscheinungsjahr
               type = Histogram
               field = publicationYear
-                     //   query = publicationYear:%s
               fetchMaximum=1000
               barWidth=10
           }
-
-          15 {
+        15 {
             id = Karte
             field = geoLocationPoint
             type = Heatmap
             sortOrder = index
             fetchMaximum = 1000
-          }
-
-          40 {
+        }
+        40 {
              id = publisher
              displayDefault = 10
              query = (publisher:"%s")
              field = publisher
-          }
-
-          20 {
+        }
+        20 {
              id = Subjects
              displayDefault = 23
              query = (subject:"%s")
              field = subject
           }
-
-          25 {
+        25 {
             id=Klassifikation
             displayDefault = 3
             query = (classification:"%s")
             field = classification
           }
-  	10 {
+  	   10 {
              id = Fachgebiet
              displayDefault = 17
              query = (subject_ddc:"%s")
              field = subject_ddc
-          }
-
-          30  {
+       }
+       30  {
              id = Author
              displayDefault = 7
              query = (creatorName:"%s")
              field = creatorName
-          }
-
-
-          45 {
-             id = resourceType
-             field = resourceType
-            query = (resourceType:"%s")
-          }
-	  50 {
-   		id=Geolocation
-		  field =geoLocationPoint
-	    hidden = 1
-		  query=(geoLocationPoint:%s)
-	 }
-
-        }
-
       }
+      45 {
+            id = resourceType
+            field = resourceType
+            query = (resourceType:"%s")
+      }
+	    50 {
+   		     id=Geolocation
+		       field =geoLocationPoint
+	         hidden = 1
+		       query=(geoLocationPoint:%s)
+	    }
+   }
+}
 
 page.includeJS {
     1=EXT:schaufenster/Resources/Public/ddc_de.js
     2=EXT:schaufenster/Cloud/ajax/libs/spin.js/2.3.2/spin.min.js
     5=EXT:schaufenster/Cloud/ajax/libs/jquery/3.3.1/jquery.min.js
-
     6=EXT:schaufenster/Cloud/ajax/libs/flot/0.8.3/jquery.flot.js
     7=EXT:schaufenster/Cloud/ajax/libs/flot/0.8.3/jquery.flot.selection.js
     8=EXT:schaufenster/Cloud/ajax/libs/jqueryui/1.12.1/jquery-ui.js
