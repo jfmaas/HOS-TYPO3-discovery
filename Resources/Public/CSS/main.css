@@ -154,17 +154,17 @@ dt::after {
 dd {
     margin: 0 0 0 340px;
     padding: 0 0 0.5em 10.5em;
-  }
-  dd li,dd ul {
+}
+dd li,dd ul {
     margin : 0;
     padding : 0;
     list-style-type: none;
- }
- .awesome-marker svg {
+}
+.awesome-marker svg {
         font-size: 14px;
         margin-top: 15px;
         color:white
- }
+}
 
  /* roboto-condensed-regular - latin_latin-ext */
 @font-face {
