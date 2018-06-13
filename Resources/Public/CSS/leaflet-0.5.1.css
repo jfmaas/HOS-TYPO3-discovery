@@ -294,13 +294,16 @@
 	height: 44px;
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
+
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
 	display: none;
 	}
+
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
 	display: block;
 	position: relative;
 	}
+
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
 	color: #333;
