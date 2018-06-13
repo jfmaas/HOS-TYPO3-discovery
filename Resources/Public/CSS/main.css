@@ -165,8 +165,6 @@ dd li,dd ul {
     margin-top: 15px;
     color:white
 }
-
- /* roboto-condensed-regular - latin_latin-ext */
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
@@ -179,11 +177,6 @@ dd li,dd ul {
        url('../Fonts/roboto-condensed-v16-latin_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../Fonts/roboto-condensed-v16-latin_latin-ext-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
 }
-
-
-
-
-
 .tx_find dd  {
   margin-top: 0!important;
   margin-bottom: 0!important;
