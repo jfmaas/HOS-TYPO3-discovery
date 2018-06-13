@@ -2,7 +2,9 @@
     font-family: "Roboto Condensed";
 }
 
-.facet-id-Schlagworte .facetList, .facet-id-Fachgebiet .facetList {display:none}
+.facet-id-Schlagworte .facetList, .facet-id-Fachgebiet .facetList ,.top{
+  display:none
+}
 
 .tx_find .facets {
 float:left!important;
