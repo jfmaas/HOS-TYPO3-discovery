@@ -416,6 +416,7 @@
 	     -o-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	}
+
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
 	background: white;
 
