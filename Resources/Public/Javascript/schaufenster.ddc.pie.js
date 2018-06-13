@@ -1,11 +1,9 @@
-
 $(document).ready(function() {
         /* Fancifizierung der DDC */
         var values = [];
         var colors = [];
         var labels = [];
         var facets = {};
-        
         $('.facet-id-Fachgebiet li').each(function(ndx,elem){
                 var that = $(this);
                 if (ndx<17) {
@@ -18,14 +16,12 @@ $(document).ready(function() {
                var that = $(this);
                var ddc= that.attr('value');
                if (ddc) {
-                    ddc = ddc.replace(/\./,'').substring(0,3); 
+                    ddc = ddc.replace(/\./,'').substring(0,3);
                     if (!facets[ddc]) facets[ddc] = parseInt(values.push(that.attr('count')));
                     else facets[ddc]  += parseInt(that.attr('count'));
                }
         });
-        
-        console.log(facets); 
-        var data = { 
+        var data = {
                 datasets : [{
                         data : values,
                         backgroundColor : colors
@@ -38,7 +34,7 @@ $(document).ready(function() {
                         if (elem[0] != undefined) {
                                 startNextSearch(labels[elem[0]._index]);
                         }
-                }        
+                }
                 function onLegendClick(event, elem) {
                         startNextSearch(elem.text);
                 };
@@ -51,7 +47,6 @@ $(document).ready(function() {
                                 }
                         });
                 }
-                
                 var ctx = $("#piechartcanvas")[0].getContext("2d");
                 var myPieChart = new Chart(ctx,{
                         type: 'pie',//'doughnut',
@@ -61,9 +56,9 @@ $(document).ready(function() {
                                    onClick:onLegendClick,
                                    display:true,position:'bottom',
                                    labels : {
-                                           
+
                                    }
-                            },    
+                            },
                             onClick : onPieClick
                         }
             });} catch(e) {}
@@ -80,14 +75,14 @@ function FacetsToTree(DDC,facets) {
 		var level3 = code2tree(code).level3;
 
 		var level1Node = getNodeByName(tree.children,level1);
-		if (level1Node == null) 
+		if (level1Node == null)
 			tree.children.push({name:level1,children:[]});
 
 		var level2Node = getNodeByName(level1Node.children,level2);
-		if (level2Node == null) 	
+		if (level2Node == null)
 			level1Node.children.push({name:level2,children:[]});
-		level2Node.push({name:level3,size:1});		
-		
+		level2Node.push({name:level3,size:1});
+
 	});
 	function code2tree(code){
 		return {
