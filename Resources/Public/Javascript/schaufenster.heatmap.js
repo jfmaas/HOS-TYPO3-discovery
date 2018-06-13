@@ -1,4 +1,4 @@
-var Stamen_TonerLite = L.tileLayer('/Stamen/{z}/{x}/{y}.png', {attribution: 
+var Stamen_TonerLite = L.tileLayer('/Stamen/{z}/{x}/{y}.png', {attribution:
 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
 var Esri_WorldImagery = L.tileLayer('/MiniMap/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
@@ -50,13 +50,13 @@ var myHeatMap = function(props) {
                         var link ="/index.php?id=1&tx_find_find%5Bfacet%5D%5BGeolocation%5D%5B###NEEDLE###%5D=1&tx_find_find%5Bcontroller%5D=Search#tx_find";
                         link=link.replace('###NEEDLE###',encodeURI(nearestPoint.lat+','+nearestPoint.lng));
                         top.location=link;
-                   
-                   //                   $.toast({message:"Suche im Umkreis " + nearestPoint.lat+','+nearestPoint.lng});  
+
+                   //                   $.toast({message:"Suche im Umkreis " + nearestPoint.lat+','+nearestPoint.lng});
                 });
-   
+
         } else {
   //
-        }           
+        }
         heatmapLayer.setData({
                 max : 4,
                 data : heatmapdata
@@ -89,14 +89,14 @@ var tx_schaufenster_facetHeatmap = {
                                                         props.layer = Stamen_TonerLite;
                                                         props.zoomControl = true;
                                                         bigmap = myHeatMap(props);
-                                             
+
                                             }
                                         }
                                 });
                                 $(".fancybox-content").css("padding",0);
                                    $.toast({message:"Klick auf Farbfläche startet Suche."});
                         });
-                     
+
                        function onClick(e) {
                                var latlng  = L.latLng(e.latlng);
                                var circle = L.circle(latlng, {
@@ -105,9 +105,7 @@ var tx_schaufenster_facetHeatmap = {
                                        fillOpacity: 0.3,
                                        radius: 500
                                }).addTo(bigmap);
-                               bigmap.setView(e.latlng,13); 
-                       } 
-
-
+                               bigmap.setView(e.latlng,13);
+                       }
                 }
 }; 
