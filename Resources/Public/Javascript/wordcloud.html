@@ -109,9 +109,6 @@ function update() {
     }
     layout.stop().words(tags).start();
 }
-
-
-
       function onBigBubble(d,i) {
           var link ="/index.php?id=1&tx_find_find%5Bfacet%5D%5BSubjects%5D%5B###NEEDLE###%5D=1&tx_find_find%5Bcontroller%5D=Search#tx_find";
           link=link.replace('###NEEDLE###',encodeURI(d.text));
@@ -123,7 +120,7 @@ function update() {
         });
         update();
 
-   } 
+   }
 </script>
 </body>
 </html>
