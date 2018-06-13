@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
  /* Fancifizierung der Publisher */
         var values = [];
@@ -11,8 +10,8 @@ $(document).ready(function() {
                         values.push(that.attr('count'));
                         colors.push(getRandomColor());
                 }
-        }); 
-        var data = { 
+        });
+        var data = {
                 datasets : [{
                         data : values,
                         backgroundColor : colors
@@ -25,7 +24,7 @@ $(document).ready(function() {
                         if (elem[0] != undefined) {
                                 startNextSearch(labels[elem[0]._index]);
                         }
-                }        
+                }
                 function onLegendClick(event, elem) {
                         startNextSearch(elem.text);
                 };
@@ -39,8 +38,8 @@ $(document).ready(function() {
                                         }
                         });
                         self.location = link.replace('###NEEDLE###',encodeURI(label));
-                }        
-                
+                }
+
                 var ctx = $("#canvaspublisher")[0].getContext("2d");
                 var myPieChart = new Chart(ctx,{
                         type: 'doughnut',
@@ -51,9 +50,9 @@ $(document).ready(function() {
                                    display:false,
                                    position:'bottom',
                                    labels : {
-                                           
+
                                    }
-                            },    
+                            },
                             onClick : onPieClick
                         }
             });} catch(e) {}
