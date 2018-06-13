@@ -188,6 +188,4 @@ $(function() {
         that.css('display', 'block');
         that.addClass(getResIcon(that.attr('value')));
     })
-
-
 });
