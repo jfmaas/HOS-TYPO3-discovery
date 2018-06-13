@@ -147,10 +147,10 @@ ul.jqtree-tree.jqtree-rtl li.jqtree-ghost.jqtree-inside {
 ul.jqtree-tree.jqtree-rtl span.jqtree-border {
     right: -2px;
 }
-
 span.jqtree-dragging {
   color: #fff;
   background: #000;
   opacity: 0.6;
   cursor: pointer;
-  padding: 2px 8px; }
+  padding: 2px 8px;
+}
