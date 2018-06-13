@@ -148,10 +148,10 @@ dt {
     font-weight: bold;
     color: darkred;
 }
-  dt::after {
+dt::after {
     content: ": ";
-  }
-  dd {
+}
+dd {
     margin: 0 0 0 340px;
     padding: 0 0 0.5em 10.5em;
   }
