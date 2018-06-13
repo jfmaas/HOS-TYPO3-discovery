@@ -562,6 +562,6 @@ The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small s
 
 The facet ddc contains only the numbers. The resolving of this numbers to lables will proceded in Javascript layer. Server delivers a simple list, this list will transform in a tree model.
 
-The script  `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part with facets into a graphical tree.    
+The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part into a graphical tree.    
 
 
