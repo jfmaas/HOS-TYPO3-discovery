@@ -118,7 +118,6 @@ body {
     background-size: inherit;
     display:none
 }
-
 div.navigation.top {
     font-size:14px;
     padding:0;margin:0
@@ -138,11 +137,10 @@ div.navigation.top {
 article p {
     margin-top:5px;
 }
-
 dl {
     padding: 0.5em;
-  }
-  dt {
+}
+dt {
     float: left;
     clear: left;
     width: 190px;
