@@ -3,19 +3,19 @@ var FIELDS = {
     titles : 'Dokumententitel',
     subjects : 'Schlagwort',
     authors : 'AutorInnen',
-    publishers :"HerausgeberIn"	
+    publishers : "HerausgeberIn"
 }
 
 $(function() {
         $('.searchForm').prepend('<a href="/" title="Zurück zum Start der Suche" class="bel-haus" style="position:absolute;font-size:100px;color:darkred;line-height:0.55"></a>')
         $.toast({
           message: 'Der Suchbereich kann mit dem mittleren Auswählen eingeschränkt werden.' , // this is the only required field
-        });  
+        });
         // inserting fieldselectbox:
         var params = getQueries();
         //$(".formFields").css('width','600px');
         var selectedInput = params.field || 'all';
-        var selectHTML = '<div style="width:200px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' 
+        var selectHTML = '<div style="width:200px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">'
         + '<select id="searchfieldselector">';
 	Object.keys(FIELDS).forEach(function(field){
 		var selected = (field == selectedInput)? 'selected' : '';
@@ -24,7 +24,7 @@ $(function() {
 	selectHTML +='</select></div>';
         $('.formFields .fieldContainer label').hide();
         $('.controls').prepend(selectHTML);
-        $('.submit').attr('value','Suche starten');	 
+        $('.submit').attr('value','Suche starten');
         $('#searchfieldselector').on('change',function(evt,item){
         	selectedInput = this.value;
         	renderInputFields();
@@ -34,11 +34,11 @@ $(function() {
         	$('.formFields .inputType-text').each(function(){
         		var that = $(this);
         		that.attr('placeholder','Suchtext  hier eingeben …');
-        		if (that.attr('id')=='c1-field-'+selectedInput || that.attr('id')=='c-field-'+selectedInput) that.show(); 
+        		if (that.attr('id')=='c1-field-'+selectedInput || that.attr('id')=='c-field-'+selectedInput) that.show();
         		else {
         			that.hide();
         			that.val('');
-        		}	 
+        		}
         	});
         }
         function getQueries() {
@@ -52,7 +52,7 @@ $(function() {
  		       var match = key.match(REGEX);
  		       if (match && hash[1]!="") {
  		 	     res ={field:match[1], value : hash[1]};
- 		 	}	      
+ 		 	}
  		}
  		return res;;
 	}
@@ -73,7 +73,7 @@ for (i = 0; i < x.length; i++) {
   /*for each element, create a new DIV that will contain the option list:*/
   b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
-  
+
   /* Reaction on click */
   for (j = 1; j < selElmnt.length; j++) {
     /*for each option in the original select element,
@@ -87,7 +87,7 @@ for (i = 0; i < x.length; i++) {
         and the selected item:*/
         var y, i, k, s, h;
         selectedInput = e.target.getAttribute("data-value");
-        renderInputFields();        
+        renderInputFields();
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         h = this.parentNode.previousSibling;
         for (i = 0; i < s.length; i++) {
@@ -103,18 +103,13 @@ for (i = 0; i < x.length; i++) {
           }
         }
         h.click();
-        
-        
         $.toast({
           message: 'Suche im Bereich „' + FIELDS[selectedInput] +"“", // this is the only required field
           timeout: 3000, // sepcify time in ms after the toast closes. set to false or 0 to disable
           button: {
-            text: 'OK', // the button text, will be transformed into uppercase automatically
+             text: 'OK', // the button text, will be transformed into uppercase automatically
         }
-});
-        
-        
-        
+      });
     });
     b.appendChild(c);
   }
@@ -149,7 +144,7 @@ function closeAllSelect(elmnt) {
 }
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
-document.addEventListener("click", closeAllSelect); 
+document.addEventListener("click", closeAllSelect);
 
 
 });
