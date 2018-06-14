@@ -60,10 +60,10 @@ $(document).ready(function() {
         });
     } catch (e) {}
 
-    function getRandomColor(monochrome) {
+    function getRandomColor(grayscale) {
         var letters = '0123456789ABCDEF',
             color = '#';
-        if (monochrome == true) {
+        if (grayscale == true) {
           var color = ''+letters[Math.floor(Math.random() * 16)] +letters[Math.floor(Math.random() * 16)];
            return '#'+color + color+color;
         } else {
