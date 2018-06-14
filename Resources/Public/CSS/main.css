@@ -265,3 +265,7 @@ all;opacity:0;background:darkblue}
 .toast .toast-button:active{background:#6b626b;}
 .toast-text {color:white}
 .toast-button, .toast-close {color:silver}
+.grayscale {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
