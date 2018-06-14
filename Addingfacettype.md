@@ -16,11 +16,14 @@ Inside the template two parts are implemented:
 ```
 
 ### HTML embedding
+
+Example
+
 ```
 <div class="facetMap-container">
 	<div id="schaufenster_heatmap" class="heatmapContainer"></div>
 </div>
 ```
+The logic inside the script references to DOM, declared in HTML snippet
 
-
-plugin.tx_find.settings.queryFields.type
+In `plugin.tx_find.settings.queryFields.type` we can link the partial.
