@@ -190,7 +190,7 @@ $(function() {
         that.addClass(getResIcon(that.attr('value')));
     });
 //    setTimeout(function(){
-    //  $('img, div, span').addClass('grayscale').css('filter','blur(2px)');
+      $('img, div, span').addClass('grayscale');
 
 //    },3000);
 });
