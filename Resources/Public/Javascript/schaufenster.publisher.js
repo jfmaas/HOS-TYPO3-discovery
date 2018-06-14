@@ -63,10 +63,15 @@ $(document).ready(function() {
     function getRandomColor(monochrome) {
         var letters = '0123456789ABCDEF',
             color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+        if (monochrome == true) {
+          var color = ''+letters[Math.floor(Math.random() * 16)] +letters[Math.floor(Math.random() * 16)];
+          retur color + color;
+        } else {
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
         }
-        return color;
+
     }
 
 });
