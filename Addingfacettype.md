@@ -1,1 +1,1 @@
-# Adding new facet typeof
+# Adding new facet type
