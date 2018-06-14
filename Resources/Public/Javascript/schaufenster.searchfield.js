@@ -7,7 +7,7 @@ var FIELDS = {
 }
 
 $(function() {
-    $('.searchForm').prepend('<a href="/" title="Zurück zum Start der Suche" class="bel-haus" style="position:absolute;font-size:100px;color:darkred;line-height:0.55"></a>')
+    $('.searchForm').prepend('<a href="/" title="Zurück zum Start der Suche" class="bel-haus" style="position:absolute;font-size:100px;color:darkred;line-height:0.55;cursor:pointer"></a>')
     $.toast({
         message: 'Der Suchbereich kann mit dem mittleren Auswählen eingeschränkt werden.', // this is the only required field
     });
