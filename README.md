@@ -568,4 +568,4 @@ The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the origi
 
 ### Adding of new facet components
 
-Currently all new components are realized with pure jQuery. This [page](/HOS-TYPO3-discovery/blob/master/Dokumentation/Addingfacettype.md) describes the clean, TYPO3-conform way.
+Currently all new components are realized with pure jQuery. This [page](Dokumentation/Addingfacettype.md) describes the clean, TYPO3-conform way.
