@@ -17,6 +17,11 @@ Inside the template two parts are implemented:
 ```
 
 ### HTML embedding
+```
+<div class="facetMap-container">
+	<div id="schaufenster_heatmap" class="heatmapContainer"></div>
+</div>
+```
 
 
 plugin.tx_find.settings.queryFields.type
