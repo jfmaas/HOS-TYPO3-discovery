@@ -72,8 +72,6 @@ tx_schaufenster_facetHeatmap.initHeatmap ({
 
 Since TYPO3 v8 the Screenhelpers escaped all output. I.e. all `"` will outputed as `&quot;`. The `<f:format.htmlentitiesDecode>` decodes the output to get the right syntax.
 
-
-
 ### HTML embedding
 
 Example
