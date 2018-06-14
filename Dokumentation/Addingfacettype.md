@@ -37,6 +37,19 @@ For LOGIC there are two solutions:
 * calling of function in global namespace (pullation)
 * local coding inside the callback
 
+### Interactions
+
+Javascript needs parameters. There are two sources: typoscript and backend data.
+
+#### TypoScript
+
+
+####
+
+facetData:<f:format.htmlentitiesDecode>{s:format.json(data:facetData.values)}</f:format.htmlentitiesDecode>,
+facetFetchMaximum:<f:format.htmlentitiesDecode>{facetInfo.fetchMaximum}</f:format.htmlentitiesDecode>
+
+
 
 ### HTML embedding
 
