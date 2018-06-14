@@ -22,7 +22,7 @@ In `plugin.tx_find.settings.facets.type` we can link the partial.
 
 This name (in our case `Heatmap`) references to file name inside folder `Resources/Private/Partials/Facets/Facet/` with name `Heatmap.html`.
 
-Inside the template two parts are implemented:
+Inside the [template partial]() two parts are implemented:
 
 ### Javascript embedding
 
@@ -32,6 +32,11 @@ Inside the template two parts are implemented:
 	$(function(){/* LOGIC */});
 </s:page.script>
 ```
+For LOGIC there are two solutions:
+
+* calling of function in global namespace (pullation)
+* local coding inside the callback
+
 
 ### HTML embedding
 
