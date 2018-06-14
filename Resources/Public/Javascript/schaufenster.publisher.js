@@ -66,7 +66,7 @@ $(document).ready(function() {
         if (monochrome == true) {
           var color = ''+letters[Math.floor(Math.random() * 16)] +letters[Math.floor(Math.random() * 16)];
           console.log(color);
-           return color + color;
+           return '#'+color + color;
         } else {
             for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
