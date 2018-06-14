@@ -565,3 +565,5 @@ The facet ddc contains only the numbers of ddc. The resolving of this numbers to
 The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part into a graphical tree.    
 -------------------------
 ### Adding of new facet components
+
+Currently all new components are realized with pure jQuery. This [page](./Addingfacettype.md) describes the clean, TYPO3-conform way.
