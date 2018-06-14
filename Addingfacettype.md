@@ -26,4 +26,16 @@ Example
 ```
 The logic inside the script references to DOM, declared in HTML snippet
 
-In `plugin.tx_find.settings.queryFields.type` we can link the partial.
+In `plugin.tx_find.settings.facets.type` we can link the partial.
+
+```
+  plugin.tx_find.settings.facets {
+    1 {
+        id = Karte
+        field = geoLocationPoint
+        type = Heatmap // <= the name
+        sortOrder = index
+        fetchMaximum = 1000
+    }
+  }
+```
