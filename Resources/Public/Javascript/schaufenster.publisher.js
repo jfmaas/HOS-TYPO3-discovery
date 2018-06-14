@@ -8,7 +8,7 @@ $(document).ready(function() {
         if (ndx < 17) {
             labels.push(that.attr('value'));
             values.push(that.attr('count'));
-            colors.push(getRandomColor(true));
+            colors.push(getRandomColor(false));
         }
     });
     var data = {
