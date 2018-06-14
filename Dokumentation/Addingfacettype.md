@@ -81,4 +81,4 @@ Example
 	<div id="schaufenster_heatmap" class="heatmapContainer"></div>
 </div>
 ```
-The logic inside the script references to DOM, declared in HTML snippet
+The logic inside the script references to DOM, declared in HTML snippet.
