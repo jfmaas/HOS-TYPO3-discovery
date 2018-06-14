@@ -31,7 +31,7 @@ Inside the [template partial]() two parts are implemented:
 <s:page.script>
 	$(function(){/* LOGIC */});
 </s:page.script>
-```
+```   
 For LOGIC there are two solutions:
 
 * calling of function in global namespace (pullation)
