@@ -266,8 +266,8 @@ all;opacity:0;background:darkblue}
 .toast-text {color:white}
 .toast-button, .toast-close {color:silver}
 .grayscale {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(90%);
 }
 #home-button {
   position:absolute;
