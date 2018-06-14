@@ -28,7 +28,7 @@ Inside the [template partial]() two parts are implemented:
 
  Example
 ```
-<s:page.script name="find_geohash">
+<s:page.script>
 	$(function(){/* LOGIC */});
 </s:page.script>
 ```
