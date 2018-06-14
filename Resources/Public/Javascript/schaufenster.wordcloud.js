@@ -14,7 +14,7 @@
 		}
 		$(document).ready(function() {
 			/* Fancifizierung Schlagworte */
-			words=  getWords(99);
+			words=  getWords(69);
 			$(".facet-id-Subjects").html('<h1>Schlagworte</h1><a href="javascript:"><div id="wordcloud" height="160" width="100%" /></a>');
 			d3.wordcloud().size([280, 160]).selector('#wordcloud').words(words).onwordclick(openBigBubble).start();
 
@@ -34,10 +34,10 @@
 				onShow : function(e) {
 					$("iframe").each(function() {
 						$(this).one("load", function(){
-						var $this=  $(this)[0]; 
+						var $this=  $(this)[0];
 setTimeout(function(){     						   $this.contentWindow.start(words,W,H);},2);
 					        });
-					});					
+					});
 				}
 			});
 		};
