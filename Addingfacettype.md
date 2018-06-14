@@ -11,8 +11,7 @@ Inside the template two parts are implemented:
  Example
 ```
 <s:page.script name="find_geohash">
-	$(function() {
-  });
+	$(function(){});
 </s:page.script>
 ```
 
