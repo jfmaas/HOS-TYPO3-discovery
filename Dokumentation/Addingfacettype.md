@@ -56,7 +56,7 @@ var facetFetchMaximum = <f:format.htmlentitiesDecode>{facetInfo.fetchMaximum}</f
 
 ### Possible pitfall
 
-Since TYPO3 v8 the Screenhelpers escaped all output. I.e. all `""` will outputed as `&quot;`. The `<f:format.htmlentitiesDecode> decodes the output to get the right syntax.
+Since TYPO3 v8 the Screenhelpers escaped all output. I.e. all `""` will outputed as `&quot;`. The `<f:format.htmlentitiesDecode>` decodes the output to get the right syntax.
 
 facetData:<f:format.htmlentitiesDecode>{s:format.json(data:facetData.values)}</f:format.htmlentitiesDecode>,
 
