@@ -4,20 +4,20 @@ This repo describes the using of the TYPO3-Extensions `discovery`. The extension
 
 Here some screenshots:
 
-__Search with autocompleting__ 
+__Search with autocompleting__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss01.png"
-width=620 /> 
+width=620 />
 
 __Heatmap with geolocations__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss02.png"
-width=620 /> 
+width=620 />
 
 __Interactive DDC tree__
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/ss03.png"
-width=620 /> 
+width=620 />
 
 __Wordcloud of subjects__
 
@@ -27,7 +27,7 @@ width=620 />
 ## Architecture
 ### LAMP
 
-The architecture is based on [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) 
+The architecture is based on [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle))
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/800px-LAMP_software_bundle.svg.png)
 
@@ -37,7 +37,7 @@ Unfortunately developing system and production system is based on different dist
 The project is tested on two Linux distributions:
 
 <img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
-width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.rrz.uni-hamburg.de/) 
+width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.rrz.uni-hamburg.de/)
 
 <img src="https://www.securitylab.ru/upload/iblock/03d/03d90bafd6c8791c524e6f3954771849.png"
 width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
@@ -46,18 +46,18 @@ width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https:
 First we can test if apache is already installed by:
 
 ```
-sudo netstat -tnl 
+sudo netstat -tnl
 ```
 
 Or more verbose with:
 
 ```
-sudo service httpd status 
+sudo service httpd status
 ````
 Or on UBUNTU with:
 
 ```
-sudo service apache2 status 
+sudo service apache2 status
 ```
 
 With this result:
@@ -86,7 +86,7 @@ rainer@hosdev:~/ext/schaufenster$ sudo service apache2 status
 
 ### Installing of apache2, mySQL, Hypertext Preprocessor
 Depending on linux distribution (ubuntu/centos) we use different package
-manager. The [current version](http://de2.php.net/downloads.php) (2018-06-12) is 7.2.6. For our project use PHP7.1 
+manager. The [current version](http://de2.php.net/downloads.php) (2018-06-12) is 7.2.6. For our project use PHP7.1
 
 **UBUNTU**
 
@@ -112,8 +112,8 @@ CREATE USER typo3_db_user@localhost IDENTIFIED BY 'secretpassword';
 GRANT ALL PRIVILEGES ON typo3.* TO typo3_db_user@localhost;
 FLUSH PRIVILEGES;
 quit;
-```	
- 
+```
+
 'secretpassword' is only an example, you have to substitute!
 
 
@@ -240,10 +240,10 @@ With this step the LAMP install is finished on both platforms.
 
 #### UBUNTU
 
-First, we should install the Java JDK. 
+First, we should install the Java JDK.
 
 ```
-sudo apt-get -y install openjdk-8-jdk 
+sudo apt-get -y install openjdk-8-jdk
 sudo mkdir /usr/java
 sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64 /usr/java/default
 ```
@@ -278,7 +278,7 @@ You can easily download it using the wget command:
 
 ```
 wget http://apache.org/dist/lucene/solr/7.3.1/solr-7.3.1.tgz
-``` 
+```
 You can see the available version under http://apache.org/dist/lucene/solr/
 
 Once the download is  completed, extract the service installation file with the following command:
@@ -378,18 +378,18 @@ width=80 />
 	AuthBasicProvider file
 	AuthUserFile "/etc/httpd/.htpassword"
 	Require user solr
-     </Location>	
+     </Location>
      ProxyPreserveHost On
      ProxyRequests Off   
      ProxyPass /solrAdmin  http://localhost:8983/solr
      ProxyPassReverse /solrAdmin http://localhost:8983/solr
 </VirtualHost>
-``` 
+```
 
 A symbol link to `sites-enabled` activates the configuration:
 
 ```
-ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf 
+ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf
 ```
 
 
@@ -404,7 +404,7 @@ creates a new file `.htpassword` inside apache root config (we have
 announced this in our host section) and adds a user `solradmin`.
 
 
-Now we can access the admin UI by URL like `http://myserver.com/solrAdmin`. 
+Now we can access the admin UI by URL like `http://myserver.com/solrAdmin`.
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/solradmin.png)
 
@@ -460,7 +460,7 @@ Options:
 ```
 
 ### Extension find (subgoe)
-### Extension discovery (subhh) 
+### Extension discovery (subhh)
 
 ## Architecture
 
@@ -483,8 +483,8 @@ Every field will configured in typoscript (setup.txt).
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf2.png)
 #### Input selector
 The original HTML element SELECT is difficult to style. Therefore we use a
-custome element following this instruction: https://www.w3schools.com/howto/howto_custom_select.asp 
-The handling of selector changes the visibility of input fields. After changing of focus the recent field will emptied. After reload the selector will preselected. 
+custome element following this instruction: https://www.w3schools.com/howto/howto_custom_select.asp
+The handling of selector changes the visibility of input fields. After changing of focus the recent field will emptied. After reload the selector will preselected.
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
 
@@ -493,14 +493,14 @@ Clicking of Submit button submitts the form.
 
 ### Heatmap with geolocation of publications
 
-Obviously the solr query generates more hits then a common map api can procede. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have only a couple of geo locations but a big number of hits on one location. In this case a heatmap is a good solution. The model consists of a collection of geolocations with optional value for every location. 
+Obviously the solr query generates more hits then a common map api can procede. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have only a couple of geo locations but a big number of hits on one location. In this case a heatmap is a good solution. The model consists of a collection of geolocations with optional value for every location.
 
-The UI has two parts: a "thumbnail" in facet column 
+The UI has two parts: a "thumbnail" in facet column
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap1.png" width=300 />
 
 and a big version in a lightbox overlay:
- 
+
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap2.png" width=800 />
 
 As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology. The world map is divided in a fixed raster of tiles (in most cases 256x256px) for all zoom levels. An other technology ([wms](https://en.wikipedia.org/wiki/Web_Map_Service)) renders the maps in real time on server. The most modern technology solution realizes the rendering on client and only vector data will transfered from server to client.
@@ -514,31 +514,31 @@ width=80 />
 <VirtualHost *:80>
     ServerAdmin netadmin@sub.uni-hamburg.de
     ServerName openscience.hamburg.de
-    
+
     <Directory />
        Options +FollowSymLinks
        AllowOverride None
     </Directory>
-    
+
     <Directory /var/www/html/schaufenster >
        Options +FollowSymLinks
        AllowOverride None
 	   Require all granted
     </Directory>
-    
+
     DocumentRoot /var/www/html/schaufenster
     DirectoryIndex index.html index.php   
 	ProxyPreserveHost On
 	ProxyRequests Off
-    
-    # Thumbnail tiles: 
+
+    # Thumbnail tiles:
     ProxyPass /ArcGIS/  https://server.arcgisonline.com/
     ProxyPassReverse /ArcGIS https://server.arcgisonline.com/
-    
+
     # Blackwhite map:
     ProxyPass /Stamen  https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/
     ProxyPassReverse /Stamen/  https://stamen-tiles-a.a.ssl.fastly.net/toner-lite/
-    
+
     # Assets from cloud:
     ProxyPass /Cloud/  https://cdnjs.cloudflare.com/
     ProxyPassReverse /Cloud/  https://cdnjs.cloudflare.com/
@@ -563,5 +563,5 @@ The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small s
 The facet ddc contains only the numbers of ddc. The resolving of this numbers to tables will proceeded in Javascript layer. Server delivers a simple list, this list will transform in a tree model.
 
 The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part into a graphical tree.    
-
-
+-------------------------
+### Adding of new facet components
