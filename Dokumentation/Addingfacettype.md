@@ -42,7 +42,7 @@ For LOGIC there are two solutions:
 Javascript needs parameters. There are two sources: typoscript and backend data.
 
 #### TypoScript
-
+ 
 
 ####
 
