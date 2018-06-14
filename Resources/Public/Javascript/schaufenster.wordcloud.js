@@ -17,7 +17,8 @@
 			words=  getWords(69);
 			$(".facet-id-Subjects").html('<h1>Schlagworte</h1><a href="javascript:"><div id="wordcloud" height="160" width="100%" /></a>');
 			d3.wordcloud().size([280, 160]).selector('#wordcloud').words(words).onwordclick(openBigBubble).start();
-
+			$("#wordcloud").style('-webkit-filter','grayscale(100%)').style('filter','grayscale(100%)');
+		
 		});
 		// https://github.com/wvengen/d3-wordcloud
 		function openBigBubble(d, i) {
