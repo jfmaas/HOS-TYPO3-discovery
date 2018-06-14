@@ -8,7 +8,7 @@ $(document).ready(function() {
                 if (ndx<17) {
                         labels.push(that.attr('value'));
                         values.push(that.attr('count'));
-                        colors.push(getRandomColor());
+                        colors.push(getRandomColor(true));
                 }
         });
         var data = {
@@ -56,5 +56,6 @@ $(document).ready(function() {
                             onClick : onPieClick
                         }
             });} catch(e) {}
-        function getRandomColor() {var letters = '0123456789ABCDEF',color = '#';for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];} return color;}
+        function getRandomColor(monochrome) {var letters = '0123456789ABCDEF',color = '#';for (var i = 0; i < 6; i++) {color += letters[Math.floor(Math.random() * 16)];} return color;}
+
 });
