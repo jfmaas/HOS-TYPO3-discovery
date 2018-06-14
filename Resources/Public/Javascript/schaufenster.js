@@ -189,5 +189,7 @@ $(function() {
         that.css('display', 'block');
         that.addClass(getResIcon(that.attr('value')));
     });
-      //$('img, div, span').addClass('grayscale');
+    setTimeout(function(){
+      $('img, div, span').addClass('grayscale');
+    },3000);
 });
