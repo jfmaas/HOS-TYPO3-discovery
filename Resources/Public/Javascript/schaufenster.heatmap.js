@@ -1,6 +1,7 @@
 var Stamen_TonerLite = L.tileLayer('/Stamen/{z}/{x}/{y}.png', {attribution:
 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'});
-var Esri_WorldImagery = L.tileLayer('/MiniMap/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+var Esri_WorldImagery = L.tileLayer('/Stamen/{z}/{x}/{y}.png');
+//L.tileLayer('/MiniMap/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
 var myHeatMap = function(props) {
         var heatmapdata = Object.keys(props.facetData).map(function(latlng) {
@@ -108,4 +109,4 @@ var tx_schaufenster_facetHeatmap = {
                                bigmap.setView(e.latlng,13);
                        }
                 }
-}; 
+};
