@@ -20,6 +20,8 @@ In `plugin.tx_find.settings.facets.type` we can link the partial.
   }
 ```
 
+This name (in our case `Heatmap`) references to file name inside folder `Resources/Private/Partials/Facets/Facet/` with name `Heatmap.html`.
+
 Inside the template two parts are implemented:
 
 ### Javascript embedding
