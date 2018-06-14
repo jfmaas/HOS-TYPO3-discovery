@@ -24,6 +24,7 @@ function getResIcon(resourceType) {
 
 $(function() {
     $('body').show();
+    $('*').addClass('grayscale')
     /* Localisation of Labels */
     $.getJSON('typo3conf/ext/schaufenster/Resources/Private/Language/locallang-facets.json', function(data) {
         $('article.detail dl dt').each(function() {
