@@ -563,7 +563,9 @@ The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small s
 The facet ddc contains only the numbers of ddc. The resolving of this numbers to tables will proceeded in Javascript layer. Server delivers a simple list, this list will transform in a tree model.
 
 The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part into a graphical tree.    
+
 -------------------------
+
 ### Adding of new facet components
 
 Currently all new components are realized with pure jQuery. This [page](/subhh/HOS-TYPO3-discovery/blob/master/Addingfacettype.md) describes the clean, TYPO3-conform way.
