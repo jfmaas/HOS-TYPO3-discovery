@@ -53,13 +53,24 @@ var facetFetchMaximum = <f:format.htmlentitiesDecode>{facetInfo.fetchMaximum}</f
 
 #### Access facetData
 
+With `data:facetData.values` the facet datas from solr are accessible.
+This example exposes this data as JSON:
 
+```
+facetData:<f:format.htmlentitiesDecode>{s:format.json(data:facetData.values)}</f:format.htmlentitiesDecode>,
+```
+Here the entire snippet:
+
+```
+tx_schaufenster_facetHeatmap.initHeatmap ({
+  facetData:<f:format.htmlentitiesDecode>{s:format.json(data:facetData.values)}</f:format.htmlentitiesDecode>,
+  facetFetchMaximum:<f:format.htmlentitiesDecode>{facetInfo.fetchMaximum}</f:format.htmlentitiesDecode>
+});
+```
 
 ### Possible pitfall
 
 Since TYPO3 v8 the Screenhelpers escaped all output. I.e. all `"` will outputed as `&quot;`. The `<f:format.htmlentitiesDecode>` decodes the output to get the right syntax.
-
-facetData:<f:format.htmlentitiesDecode>{s:format.json(data:facetData.values)}</f:format.htmlentitiesDecode>,
 
 
 
