@@ -2,6 +2,8 @@
 
 ## Creating a new typename
 
-First a new string for type we have to create. The name 
+First we have to create a new string for type. The name will used in `Resources/Private/Partials/Facets/Facet/` as classname.
+
+
 
 plugin.tx_find.settings.queryFields.type
