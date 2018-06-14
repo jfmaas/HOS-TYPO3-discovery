@@ -42,7 +42,14 @@ For LOGIC there are two solutions:
 Javascript needs parameters. There are two sources: typoscript and backend data.
 
 #### TypoScript
- 
+
+The keyword is `facetInfo`. With this syntax below you can access properties of `facets`:
+`facetInfo.fetchMaximum` or `facetInfo.field`.
+Example:
+
+```
+var facetFetchMaximum = <f:format.htmlentitiesDecode>{facetInfo.fetchMaximum}</f:format.htmlentitiesDecode>
+```
 
 ####
 
