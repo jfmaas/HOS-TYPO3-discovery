@@ -196,8 +196,8 @@ $(function() {
     $('img, div, span').addClass('grayscale');
     $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
 
-    /*  Handling of coloring */
-    (function(){
+
+    (function(){   /*  Handling of coloring */
       var COLORING = 'COLORING';
       function setColoring() {
         if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
@@ -209,6 +209,5 @@ $(function() {
       });
       setColoring();
     })();
-    /* end of color handling */
-
+  
 });
