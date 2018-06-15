@@ -199,7 +199,7 @@ $(function() {
       function setColoring() {
          (!!$.cookie(COLORING))
             ?
-              $('body').addClass('grayscale');
+              $('body').addClass('grayscale')
             //  $.toast({message:"Farben werden entfernt.<br>Dauert ein wenig."})
 
             : $('body').removeClass('grayscale');
