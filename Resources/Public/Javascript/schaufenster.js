@@ -196,7 +196,7 @@ $(function() {
     $('img, div, span').addClass('grayscale');
     $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
 
-    (function(){   /*  Handling of coloring */
+    (function(){   /*  Handling of coloring/graying */
       var COLORING = 'COLORINGFLAG';
       function setColoring() {
          (!!$.cookie(COLORING))
