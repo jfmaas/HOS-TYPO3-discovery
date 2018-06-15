@@ -200,10 +200,13 @@ $(function() {
     (function(){   /*  Handling of coloring */
       var COLORING = 'COLORING';
       function setColoring() {
-        if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
+         ($.cookie(COLORING))
+            ? $('img, div, span').addClass('grayscale')
+            : $('img, div, span').removeClass('grayscale');
       }
       $('#colortoggler').click(function() {
-          ($.cookie(COLORING)) ? $.removeCookie(COLORING) :
+          ($.cookie(COLORING))
+            ? $.removeCookie(COLORING) :
            $.cookie(COLORING, '1', { expires: 777 });
           setColoring();
       });
