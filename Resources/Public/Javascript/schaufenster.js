@@ -193,7 +193,6 @@ $(function() {
         that.css('display', 'block');
         that.addClass(getResIcon(that.attr('value')));
     });
-    $('img, div, span').addClass('grayscale');
     $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
 
     (function(){   /*  Handling of coloring/graying */
