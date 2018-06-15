@@ -207,4 +207,5 @@ $(function() {
         setColoring();
     });
     setColoring();
+    /* end of color handling */
 });
