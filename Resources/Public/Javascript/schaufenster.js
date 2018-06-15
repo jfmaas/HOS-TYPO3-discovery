@@ -181,8 +181,6 @@ $(function() {
     // adding fancyBox container:
     $('<div id="largeheatmapcontainer" style="display: none;"><div class="largeheatmap" /></div>').appendTo('body');
 
-    /*        $('.searchForm').prepend('<a href="/" title="Zurück zum Start der Suche" class="bel-haus" style="float-left;font-size:64px;color:white;float:left"></a>');
-     */
     $('.resultList li').each(function() {
         var that = $(this);
         var type = that.find('.field-resourceType').text().trim();;
