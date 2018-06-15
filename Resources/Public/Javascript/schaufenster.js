@@ -198,7 +198,7 @@ $(function() {
 
 
     (function(){   /*  Handling of coloring */
-      var COLORING = 'COLORING';
+      var COLORING = 'COLORINGFLAG';
       function setColoring() {
          (!!$.cookie(COLORING))
             ? $('img, div, span').addClass('grayscale')
