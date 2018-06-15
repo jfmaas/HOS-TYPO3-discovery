@@ -195,7 +195,16 @@ $(function() {
     });
     $('img, div, span').addClass('grayscale');
     $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
+
+    /*  Handling of coloring */
+    var COLORING = 'COLORING';
+    function setColoring() {
+      console.log("coloring=" +$.cookie(COLORING));
+      if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
+    }
     $('#colortoggler').click(function() {
-        $('img, div, span').toggleClass('grayscale');
+        if ($.cookie(COLORING)) $.removeCookie(COLORING) else   $.cookie(COLORING, '1', { expires: 777 });
+        setColoring();
     });
+    setColoring();
 });
