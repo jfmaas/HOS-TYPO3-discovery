@@ -198,10 +198,10 @@ $(function() {
       var COLORING = 'COLORINGFLAG';
       function setColoring() {
          (!!$.cookie(COLORING))
-            ? {
+            ?
               $('body').addClass('grayscale');
-              $.toast({message:"Farben werden entfernt.<br>Dauert ein wenig."})
-              }
+            //  $.toast({message:"Farben werden entfernt.<br>Dauert ein wenig."})
+
             : $('body').removeClass('grayscale');
       }
       $('#colortoggler').click(function() {
