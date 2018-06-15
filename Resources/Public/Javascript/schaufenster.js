@@ -197,6 +197,7 @@ $(function() {
     $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
 
     /*  Handling of coloring */
+    (function(){
     var COLORING = 'COLORING';
     function setColoring() {
       console.log("coloring=" +$.cookie(COLORING));
@@ -207,5 +208,6 @@ $(function() {
         setColoring();
     });
     setColoring();
+  })();
     /* end of color handling */
 });
