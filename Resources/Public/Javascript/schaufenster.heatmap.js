@@ -26,13 +26,16 @@ var myHeatMap = function(props) {
                 lngField : 'lng',
                 valueField : 'count'
         });
+        // Calculating of region:
 
         var map = new L.Map(props.container, {
-                center : new L.LatLng(53.535, 9.96),
-                zoom : props.zoom || 11,
-                layers : [tileLayer,heatmapLayer],
-                zoomControl : props.zoomControl
+              layers : [tileLayer,heatmapLayer],
+              maxZoom :14,
+              zoomControl : props.zoomControl
         });
+        map.fitBounds(L.latLngBounds(heatmapdata.map(function(p){
+            return new L.latLng(p.lat,p.lng);
+        })));
         if (props.circle) {
                 map.on('click',function(e)  {
                         // looking for nearest point:

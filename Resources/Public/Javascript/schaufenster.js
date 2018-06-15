@@ -73,7 +73,7 @@ $(function() {
             case 'Tub':
                 that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
                 break;
-            case 'tuh':
+            case 'TU ':
             that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
             break;
 
@@ -200,7 +200,7 @@ $(function() {
     (function(){
       var COLORING = 'COLORING';
       function setColoring() {
-        if (!$.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
+        if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
       }
       $('#colortoggler').click(function() {
           if ($.cookie(COLORING)) $.removeCookie(COLORING);
@@ -208,6 +208,7 @@ $(function() {
           setColoring();
       });
       setColoring();
-  })();
+    })();
     /* end of color handling */
+
 });
