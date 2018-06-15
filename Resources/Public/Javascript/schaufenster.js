@@ -73,6 +73,10 @@ $(function() {
             case 'Tub':
                 that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
                 break;
+            case 'tuh':
+            that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
+            break;
+
         }
 
 
@@ -189,8 +193,9 @@ $(function() {
         that.css('display', 'block');
         that.addClass(getResIcon(that.attr('value')));
     });
-//    setTimeout(function(){
-      $('img, div, span').addClass('grayscale');
-
-//    },3000);
+    $('img, div, span').addClass('grayscale');
+    $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
+    $('#colortoggler').click(function() {
+        $('img, div, span').toggleClass('grayscale');
+    });
 });

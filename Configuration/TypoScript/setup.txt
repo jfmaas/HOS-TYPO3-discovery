@@ -146,6 +146,7 @@ page.includeJS {
     18=EXT:schaufenster/Resources/Public/Javascript/d3.wordcloud.js
     19=EXT:schaufenster/Resources/Public/Javascript/tree.jquery.js
     20=EXT:schaufenster/Cloud/ajax/libs/jstree/3.2.1/jstree.min.js
+    21=EXT:schaufenster/Cloud/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
     29=EXT:schaufenster/Cloud/ajax/libs/bodymovin/4.13.0/bodymovin.js
     30=EXT:schaufenster/Resources/Public/Javascript/schaufenster.js
     31=EXT:schaufenster/Resources/Public/Javascript/schaufenster.searchfield.js
