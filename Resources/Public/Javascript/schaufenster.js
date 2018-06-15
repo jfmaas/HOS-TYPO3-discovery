@@ -206,8 +206,8 @@ $(function() {
       }
       $('#colortoggler').click(function() {
           ($.cookie(COLORING))
-            ? $.removeCookie(COLORING) :
-           $.cookie(COLORING, '1', { expires: 777 });
+            ? $.removeCookie(COLORING)
+            : $.cookie(COLORING, '1', { expires: 777 });
           setColoring();
       });
       setColoring();
