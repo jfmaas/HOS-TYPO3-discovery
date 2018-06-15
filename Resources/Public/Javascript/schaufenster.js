@@ -203,8 +203,8 @@ $(function() {
         if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
       }
       $('#colortoggler').click(function() {
-          if ($.cookie(COLORING)) $.removeCookie(COLORING);
-          else $.cookie(COLORING, '1', { expires: 777 });
+          ($.cookie(COLORING)) ? $.removeCookie(COLORING) :
+           $.cookie(COLORING, '1', { expires: 777 });
           setColoring();
       });
       setColoring();
