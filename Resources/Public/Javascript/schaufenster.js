@@ -158,6 +158,7 @@ $(function() {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         var creators = [];
+
         $('.field-creatorName').each(function() {
             var that = $(this);
             creators.push(that.text().trim());
@@ -197,8 +198,11 @@ $(function() {
       var COLORING = 'COLORINGFLAG';
       function setColoring() {
          (!!$.cookie(COLORING))
-            ? $('img, div, span').addClass('grayscale')
-            : $('img, div, span').removeClass('grayscale');
+            ? {
+              $('body').addClass('grayscale');
+              $.toast({message:"Farben werden entfernt.<br>Dauert ein wenig."})
+              }
+            : $('body').removeClass('grayscale');
       }
       $('#colortoggler').click(function() {
           (!!$.cookie(COLORING))
