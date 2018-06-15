@@ -201,7 +201,7 @@ $(function() {
     var COLORING = 'COLORING';
     function setColoring() {
       console.log("coloring=" +$.cookie(COLORING));
-      if ($.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
+      if (!$.cookie(COLORING)) $('img, div, span').addClass('grayscale'); else $('img, div, span').removeClass('grayscale');
     }
     $('#colortoggler').click(function() {
         if ($.cookie(COLORING)) $.removeCookie(COLORING);
