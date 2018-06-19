@@ -32,6 +32,22 @@ function createMapView(latlng) {
   L.marker(latlng, {
       icon: redMarker
   }).addTo(map).bindPopup(creators.join(', ') + ':<br/>' + $('.field-title').text()).openPopup();
+  // control that shows state info on hover
+    var info = L.control();
+
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this.update();
+        return this._div;
+    };
+
+    info.update = function (props) {
+        this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+            '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+            : 'Hover over a state');
+    };
+
+    info.addTo(map);
 }
 
 /* DOM
