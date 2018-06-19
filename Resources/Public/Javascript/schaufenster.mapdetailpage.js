@@ -47,7 +47,7 @@ function createMapView(latlng) {
             : 'Hover over a state');
     };
 
-    info.addTo(map);
+  //  info.addTo(map);
 }
 
 /* DOM
