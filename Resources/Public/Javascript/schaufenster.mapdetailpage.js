@@ -13,7 +13,7 @@ $(function() {
 function createMapView(latlng) {
   /* creating map */
   const id = 'leafletmapfordetailpage';
-  var mapView = $('<div style="height:260px;width:100%" id="'+id+'"></div>');
+  var mapView = $('<div style="height:460px;width:100%" id="'+id+'"></div>');
   mapView.appendTo('article');
   var map = L.map(id).setView(latlng, 15);
   L.tileLayer('/Stamen/{z}/{x}/{y}.png', {
@@ -42,7 +42,7 @@ function createMapView(latlng) {
     };
 
     info.update = function (props) {
-      
+
     };
 
     info.addTo(map);
