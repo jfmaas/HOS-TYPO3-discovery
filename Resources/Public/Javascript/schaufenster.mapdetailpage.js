@@ -25,7 +25,7 @@ function createMapView(latlng) {
       creators.push(that.text().trim());
   });
   var url = "";
-  $('.field-url').each(function() {
+  $('.field-url a').each(function() {
       var that = $(this);
       console.log(that);
       url= that.text().trim();
