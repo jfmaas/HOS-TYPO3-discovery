@@ -30,7 +30,7 @@ function createMapView(latlng) {
       markerColor: 'red'
   });
   $('.field-title').each(function() {
-    var iframe = '<iframe width=200 height=200 src="http://heise.de/" frameborder=0/>';
+    var iframe = '<iframe width=200 height=200 src="http://heise.de/" border=0 frameborder=0/>';
     var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/>'+iframe;
      L.marker(latlng, {
          icon: redMarker
