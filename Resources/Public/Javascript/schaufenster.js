@@ -136,6 +136,9 @@ $(function() {
     $('[class$="titleLang"]').each(function() {
         $(this).hide();
     });
+    $('[class$="collector"]').each(function() {
+        $(this).hide();
+    });
     $('[class$="date"]').each(function() {
         $(this).hide();
     });
@@ -148,7 +151,7 @@ $(function() {
     });
 
 
-  
+
 
     $('.fieldLabel[for="c-field-Suche"]').each(function() {
         var that = $(this);
