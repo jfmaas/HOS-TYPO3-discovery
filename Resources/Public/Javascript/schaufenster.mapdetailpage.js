@@ -24,13 +24,18 @@ function createMapView(latlng) {
       var that = $(this);
       creators.push(that.text().trim());
   });
+  var url = "";
+  $('.dt-url').each(function() {
+      var that = $(this);
+      url= that.text().trim();
+  });
   var redMarker = L.AwesomeMarkers.icon({
       icon: 'book',
       prefix: 'fa',
       markerColor: 'red'
   });
   $('.field-title').each(function() {
-    var iframe = '<iframe style="{scale:0.3;border:0!important;}" width="200" height="200" src="https://www.heise.de/" frameborder="0"></iframe>';
+    var iframe = '<iframe style="{scale:0.3;border:0!important;}" width="200" height="200" src="'+url+'" frameborder="0"></iframe>';
     console.log(iframe);
     var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/>'+iframe;
      L.marker(latlng, {
