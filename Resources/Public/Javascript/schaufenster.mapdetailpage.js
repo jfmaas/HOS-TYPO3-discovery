@@ -27,6 +27,7 @@ function createMapView(latlng) {
   var url = "";
   $('.dt-url').each(function() {
       var that = $(this);
+      console.log(that);
       url= that.text().trim();
   });
   var redMarker = L.AwesomeMarkers.icon({
