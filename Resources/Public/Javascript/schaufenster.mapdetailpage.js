@@ -30,7 +30,7 @@ function createMapView(latlng) {
       markerColor: 'red'
   });
   $('.field-title').each(function() {
-    var popupContent = creators.join(', ') + '<hr/>' + $(this).text()
+    var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<iframe width=100 height=200 src="http://heise.de/"' />
      L.marker(latlng, {
          icon: redMarker
      }).addTo(map).bindPopup(popupContent).openPopup();
