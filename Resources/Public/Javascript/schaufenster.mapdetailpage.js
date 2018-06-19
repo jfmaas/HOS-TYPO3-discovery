@@ -30,7 +30,7 @@ function createMapView(latlng) {
       markerColor: 'red'
   });
   console.log($('.field-title'));
-  var popupContent = creators.join(', ') + '<hr/>' + $('.field-title').text()
+  var popupContent = creators.join(', ') + '<hr/>' + $('.field-title').firstChild().text()
   L.marker(latlng, {
       icon: redMarker
   }).addTo(map).bindPopup(popupContent).openPopup();
