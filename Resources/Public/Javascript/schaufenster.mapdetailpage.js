@@ -29,10 +29,10 @@ function createMapView(latlng) {
       prefix: 'fa',
       markerColor: 'red'
   });
-  var popupContent = 
+  var popupContent = creators.join(', ') + '<hr/>' + $('.field-title').text()
   L.marker(latlng, {
       icon: redMarker
-  }).addTo(map).bindPopup(creators.join(', ') + ':<br/>' + $('.field-title').text()).openPopup();
+  }).addTo(map).bindPopup(popupContent).openPopup();
   // control that shows state info on hover
     var info = L.control();
 
