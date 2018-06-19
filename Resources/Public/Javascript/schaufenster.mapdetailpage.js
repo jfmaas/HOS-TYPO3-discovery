@@ -29,6 +29,11 @@ function createMapView(latlng) {
       prefix: 'fa',
       markerColor: 'red'
   });
+  $('.field-title').each(function() {
+      var that = $(this);
+      // extracting value:
+     console.log(that);
+  });
   console.log($('.field-title'));
   var popupContent = creators.join(', ') + '<hr/>' + $('.field-title').firstChild().text()
   L.marker(latlng, {
