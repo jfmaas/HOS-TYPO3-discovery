@@ -29,6 +29,7 @@ function createMapView(latlng) {
       prefix: 'fa',
       markerColor: 'red'
   });
+  console.log($('.field-title'));
   var popupContent = creators.join(', ') + '<hr/>' + $('.field-title').text()
   L.marker(latlng, {
       icon: redMarker
