@@ -15,9 +15,7 @@ function createMapView(latlng) {
   const id = 'leafletmapfordetailpage';
   var mapView = $('<div style="height:260px;width:100%" id="'+id+'"></div>');
   mapView.appendTo('article');
-  console.log(mapView);
   var map = L.map(id).setView(latlng, 15);
-
   L.tileLayer('/Stamen/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
