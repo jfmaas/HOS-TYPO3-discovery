@@ -36,9 +36,8 @@ function createMapView(latlng) {
       markerColor: 'red'
   });
   $('.field-title').each(function() {
-    var iframe = '<iframe style="{scale:0.3;border:0!important;}" width="200" height="200" src="'+url+'" frameborder="0"></iframe>';
-    console.log(iframe);
-    var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/>'+iframe;
+    //var iframe = '<iframe style="{scale:0.3;border:0!important;}" width="200" height="200" src="'+url+'" frameborder="0"></iframe>';
+    var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/>';
      L.marker(latlng, {
          icon: redMarker
      }).addTo(map).bindPopup(popupContent).openPopup();
