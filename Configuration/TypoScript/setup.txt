@@ -154,6 +154,7 @@ page.includeJS {
     33=EXT:schaufenster/Resources/Public/Javascript/schaufenster.wordcloud.js
     34=EXT:schaufenster/Resources/Public/Javascript/schaufenster.heatmap.js
     35=EXT:schaufenster/Resources/Public/Javascript/schaufenster.publisher.js
+    36=EXT:schaufenster/Resources/Public/Javascript/schaufenster.mapdetailpage.js
     39=EXT:find/Resources/Public/JavaScript/geohash.js
     40=EXT:find/Resources/Public/JavaScript/find.js
 }

@@ -146,35 +146,10 @@ $(function() {
         var html = that.html();
         that.html('<span class="fa fa-male"></span> ' + html)
     });
-    $('.field-geoLocationPoint').each(function() {
-        var that = $(this);
-        var latlng = that.text().split(',');
-        /* adding map */
-        $('.dt-geoLocationPoint').css("width", "100%");
-        $('.dt-geoLocationPoint').html('<div style="height:460px;width:100%" id="geoLocationPointMap">Karte</div>');
-        var map = L.map('geoLocationPointMap').setView(latlng, 15);
 
-        L.tileLayer('https://stamen-tiles-a.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        var creators = [];
 
-        $('.field-creatorName').each(function() {
-            var that = $(this);
-            creators.push(that.text().trim());
-        });
+  
 
-        var redMarker = L.AwesomeMarkers.icon({
-            icon: 'book',
-            prefix: 'fa',
-            markerColor: 'red'
-        });
-
-        L.marker(latlng, {
-            icon: redMarker
-        }).addTo(map).bindPopup(creators.join(', ') + ':<br/>' + $('.field-title').text()).openPopup();
-    });
-    $('.dd-geoLocationPoint').hide();
     $('.fieldLabel[for="c-field-Suche"]').each(function() {
         var that = $(this);
         that.html('<a title="Zurück zur Suche" href="/">' + that.text() + '</a>')

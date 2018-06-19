@@ -12,36 +12,17 @@
          "facet.subject":"Schlagworte",
           "facet.subject_ddc":"Fachgebiet (DDC)",
             "facet.format":"Dokumentenformat",
-          "facet.rights":"Rechte", 
-          "facet.rightsURI":"Rechtelink", 
-        "facet.date":"Datum", 
-        "facet.language":"Sprache", 
-        "facet.resourceType":"Ressourcentyp",   
-        "facet.resourceTypeGeneral":"allgemeiner Ressourcentyp", 
+          "facet.rights":"Rechte",
+          "facet.rightsURI":"Rechtelink",
+        "facet.date":"Datum",
+        "facet.language":"Sprache",
+        "facet.resourceType":"Ressourcentyp",
+        "facet.resourceTypeGeneral":"allgemeiner Ressourcentyp",
          "facet.url":"Url",
-         "facet.institute":"Institut" , 
+         "facet.institute":"Institut" ,
          "facet.Collection":"Sammlung" ,
          "facet.Author":"AutorIn",
-         "facet.resourceTyp":"Medientyp"
-            
+         "facet.resourceTyp":"Medientyp",
+        "facet.abstract" : "Abstract"    
    }
 }
-
-
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
