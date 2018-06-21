@@ -24,11 +24,28 @@ function createMapView(latlng) {
       var that = $(this);
       creators.push(that.text().trim());
   });
-  var url = "";
+  var preview = "";
+
   $('.field-url a').each(function() {
       var that = $(this);
-      console.log(that.attr('href'));
-      url= that.attr('href');
+      $.ajax({
+                  url: '/typo3conf/ext/schaufenster/Resources/Public/screencapture.php' ,
+                  type: 'POST',
+                  data: { url :  that.attr('href')} ,
+                  error : function() {
+                      console.log('error');
+                  },
+                  success: function(data) {
+                      console.log(data)
+                      $('#previewScreen').attr('src',data);
+
+                  }
+             });
+
+
+
+
+
   });
   var redMarker = L.AwesomeMarkers.icon({
       icon: 'book',
@@ -36,8 +53,8 @@ function createMapView(latlng) {
       markerColor: 'red'
   });
   $('.field-title').each(function() {
-    //var iframe = '<iframe style="{scale:0.3;border:0!important;}" width="200" height="200" src="'+url+'" frameborder="0"></iframe>';
-    var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/>';
+
+    var popupContent = creators.join(', ') + '<hr/>' + $(this).text() + '<br/><img width="220" height="220" id="previewScreen"/>';
      L.marker(latlng, {
          icon: redMarker
      }).addTo(map).bindPopup(popupContent).openPopup();

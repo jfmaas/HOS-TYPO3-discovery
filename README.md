@@ -1,8 +1,8 @@
 # HOS-Discovery
 
-This repo describes the using of the TYPO3-Extensions `discovery`. The extension extends the [typo3find extension](https://github.com/subugoe/typo3-find) of SUB Göttingen (subugoe) and realizes the Schaufenster for the HamburgOpenScience project "hos-discovery"
+This repo describes the use of the TYPO3-Extensions `discovery`. The module extends the [typo3find extension](https://github.com/subugoe/typo3-find) of SUB Göttingen (subugoe) and realizes the Schaufenster for the HamburgOpenScience project "hos-discovery"
 
-Here some screenshots:
+Here are some screenshots:
 
 __Search with autocompleting__
 
@@ -31,10 +31,10 @@ The architecture is based on [LAMP](https://en.wikipedia.org/wiki/LAMP_(software
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/LAMP_software_bundle.svg/800px-LAMP_software_bundle.svg.png)
 
-Unfortunately developing system and production system is based on different distribution. Therefore we have different ways of configuration and [package managing](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg). Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7).
+Unfortunately the developing system and the production system are based on different distributions of linux. Therefore we have different configurations and [package managing](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg). Ubuntu uses [apt-get](https://www.digitalocean.com/community/tutorials/how-to-manage-packages-in-ubuntu-and-debian-with-apt-get-apt-cache), CENTOS uses [yum](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7).
 
 #### Linux / Package managers
-The project is tested on two Linux distributions:
+The project has been tested on two Linux distributions:
 
 <img src="https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png"
 width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.rrz.uni-hamburg.de/)
@@ -43,7 +43,7 @@ width=60 /> Ubuntu 16.04 LTS xenial, preinstalled by [RRZ Hamburg](https://www.r
 width=60 /> CentOS Linux 7, preinstalled by RZ Hamburg, managed by [Chef](https://www.chef.io/)
 
 
-First we can test if apache is already installed by:
+First we can test if apache service has already been installed by this command below:
 
 ```
 sudo netstat -tnl
@@ -85,24 +85,24 @@ rainer@hosdev:~/ext/schaufenster$ sudo service apache2 status
 ```
 
 ### Installing of apache2, mySQL, Hypertext Preprocessor
+
 Depending on linux distribution (ubuntu/centos) we use different package
-manager. The [current version](http://de2.php.net/downloads.php) (2018-06-12) is 7.2.6. For our project use PHP7.1
+managers. The [current version](http://de2.php.net/downloads.php) (2018-06-12) is 7.2.6. For our project use PHP7.1
 
 **UBUNTU**
 
-It is easy done:
+It is easily done:
 
 ```
 sudo apt-get update
 sudo apt-get install apache2 libapache2-mod-php7.1 php7.1 php7.1-mysql mysql-server php-gd php-json php-imagick php-mbstring php-curl php-apcu php-soap php-xml php-zip composer
 ```
-With this command above apache, mysql and pho is installed. After this we
-have to configure mysql by creating users:
+With this command above apache, mysql and php will installed. After this we have to configure mysql by creating users:
 
 ```
 mysql -u root -p
 ```
-During this step you have to create an user.
+During this step you have to create a user.
 
 Next:
 
@@ -199,12 +199,11 @@ sudo netstat -tnl
 
 You must see: 22, 80, 3306
 
-If the server is in internet you can test the (web-) server with your
-browser.
+If the server is connected to the  internet you can test the (web-) server with your browser.
 
 #### Getting MySQL Support In PHP
 
-To get MySQL support in PHP, we can install the php-mysqlnd package. It's a good idea to install some other PHP modules as well as you might need them for your applications. You can search for available PHP5 modules like this:
+To get MySQL support in PHP, we can install the php-mysqld package. It's a good idea to install some other PHP modules as well as you might need them for your applications. You can search for available PHP5 modules like this:
 
 ```
 sudo yum search php
@@ -216,8 +215,7 @@ Pick the ones you need and install them like this:
 sudo yum -y install php-mysqlnd php-pdo
 ```
 
-In the next step I will install some common PHP modules that are required by
-TYPO3:
+In the next step I will install some common PHP modules that are required by TYPO3:
 
 ```
 sudo yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-soap curl curl-devel
@@ -232,7 +230,7 @@ sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 8M/' /etc/php/7.0/
 ```
 This make sense for both distributions.
 
-With this step the LAMP install is finished on both platforms.
+With this final  step the LAMP install is finished on both platforms.
 
 ------------------------------
 
@@ -256,14 +254,13 @@ To install Java, run the following command:
 sudo yum install java-1.8.0-openjdk.x86_64
 ```
 
-
 Once Java is installed, you can verify it by running the following command:
 
 ```
 sudo java -version
 ```
 
-Output:
+Aspected output:
 
 ```
 openjdk version "1.8.0_111"
@@ -281,7 +278,7 @@ wget http://apache.org/dist/lucene/solr/7.3.1/solr-7.3.1.tgz
 ```
 You can see the available version under http://apache.org/dist/lucene/solr/
 
-Once the download is  completed, extract the service installation file with the following command:
+Once the download is completed, extract the service installation file with the following command:
 
 ```
 tar xzf solr-`7.3.1.tgz solr-7.3.1/bin/install_solr_service.sh --strip-components=2
@@ -344,13 +341,11 @@ solr             hard    nofile          500000
 solr             soft    nproc           65000
 solr             hard    nproc           65000
 ```
-These lines above suppresses the warning at solr start.
+These lines above suppresses the warning during start of solr.
 
 ### Exposing and restricting access to Solr interface
 
-Because of firewall/load balancer restrictions we have hidden the solr admin
-interface (port 8983) behind a reverse proxy relized in apache and
-additionally we could realize an access restriction.
+Because of firewall/load balancer restrictions we have hidden the solr admin interface (port 8983) behind a reverse proxy realized in apache and additionally we could encounter an access restriction.
 
 Inside the folder `/etc/httpd/sites-available` we have created a file
 `solrproxy.conf` with the content below:
@@ -392,7 +387,6 @@ A symbol link to `sites-enabled` activates the configuration:
 ln -s /etc/httpd/sites-available/solrproxy.conf /etc/httpd/sites-enabled/solrproxy.conf
 ```
 
-
 #### Creating solr-admin user
 This command:
 
@@ -400,8 +394,7 @@ This command:
 sudo htpasswd -c /etc/httpd/.htpassword solradmin
 ```
 
-creates a new file `.htpassword` inside apache root config (we have
-announced this in our host section) and adds a user `solradmin`.
+creates a new file `.htpassword` inside apache root config (we have announced this in our host section) and adds a user `solradmin`.
 
 
 Now we can access the admin UI by URL like `http://myserver.com/solrAdmin`.
@@ -464,7 +457,7 @@ Options:
 
 ## Architecture
 
-The Discovery app uses an extended version of subugoe/find. The most facet functionalities are realized with Javascript inside schaufenster extension.
+The Discovery app uses an extended version of `subugoe/find`. The most facet functionalities are realized with Javascript inside schaufenster extension.
 
 ### Searchfield
 
@@ -489,11 +482,11 @@ The handling of selector changes the visibility of input fields. After changing 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/sf1.png)
 
 #### Submit button
-Clicking of Submit button submitts the form.
+Clicking of Submit button submits the form.
 
 ### Heatmap with geolocation of publications
 
-Obviously the solr query generates more hits then a common map api can procede. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have only a couple of geo locations but a big number of hits on one location. In this case a heatmap is a good solution. The model consists of a collection of geolocations with optional value for every location.
+Obviously the solr query generates more hits then a common map api can process. There are more then one render modes. The most known is a cluster manager. The API limits the number of markers in a map. In our case we have only a couple of geo locations but a big number of hits on one location. In this case a heatmap is a good solution. The model consists of a collection of geolocations with optional value for every location.
 
 The UI has two parts: a "thumbnail" in facet column
 
@@ -503,9 +496,9 @@ and a big version in a lightbox overlay:
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/hmap2.png" width=800 />
 
-As API the project uses [Leaflet](https://leafletjs.com/). This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). The most mapping provider (google, mapbox, bing, osm) works with this technology. The world map is divided in a fixed raster of tiles (in most cases 256x256px) for all zoom levels. An other technology ([wms](https://en.wikipedia.org/wiki/Web_Map_Service)) renders the maps in real time on server. The most modern technology solution realizes the rendering on client and only vector data will transfered from server to client.
+The project uses [Leaflet](https://leafletjs.com/) as framework and API. This is an open source library for handling of [slippy tile maps](https://en.wikipedia.org/wiki/Tiled_web_map). Most mapping providers (like google, mapbox, bing, osm) work with this technology. The world map is divided in a fixed grid of tiles (in most cases 256x256px) for all zoom levels. An other technology ([wms](https://en.wikipedia.org/wiki/Web_Map_Service)) renders the maps in real time on server. The most modern technology solution realizes the rendering on client and only vector data will be transfered from server to client.
 
-Since end of may 2018 in europe the General Data Protection Regulation is active. In most cases the tiles comes from a remote server, because the storing of tiles costs a lot of harddisc space on server.  For avoiding exposing the IP numbers of browser to the tile provider we use a reverse proxy to tunnel the tiles.
+Since the end of may 2018 in Europe the *General Data Protection Regulation* has been active. In most cases the tiles come from a remote server, because the storing of tiles costs a lot of harddisc space on the server.  For avoiding exposing the IP numbers of browser to the tile provider we use a reverse proxy for tunneling the tile requests.
 
 <img src="https://goodlogo.com/images/logos/apache_software_foundation_logo_3074.gif"
 width=80 />
@@ -548,19 +541,19 @@ width=80 />
 
 ![](https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/wc.png)
 
-The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all subjects from facet and substitudes the old DOM part with the new one. The used d3 library is a singleton. Therefore it is not possible to realize both (small and large one) in same namespace. The large part is realized with an iframe to create a new html page.
+The script `/Resources/Public/Javascript/schaufenster.wordcloud.js` reads all subjects from subject facet and substitutes the old DOM part with the new one. The used d3 library is a singleton. Therefore it is not possible to realize both (small and large one) in the same namespace. The large part is realized with an iframe to create a new html page.
 
 ### Creators as Dounut  
 
 <img src="https://raw.githubusercontent.com/subhh/HOS-TYPO3-discovery/master/screenshots/dounut.png" width="400" title="Creators" />
 
-The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the old DOM will substitude with the new one.
+The simple logic is realized in `/Resources/Public/Javascript/schaufenster.publisher.js`. Basically the old DOM will substitute with the new one.
 
 ### DDC as (file-) tree
 
-The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small set of vocabulary terms that can be used to describe digital resources (video, images, web pages, etc.), as well as physical resources such as books or CDs, and objects like artworks. The [first 3 levels](https://github.com/subhh/HOS-TYPO3-discovery/blob/master/Resources/Public/ddc_de.js) are licencefree.
+The [Dublin Core Schema](https://en.wikipedia.org/wiki/Dublin_Core) is a small set of vocabulary terms that can be used to describe digital resources (video, images, web pages, etc.), as well as physical resources such as books or CDs, and objects like artworks. The [first 3 levels](https://github.com/subhh/HOS-TYPO3-discovery/blob/master/Resources/Public/ddc_de.js) are licence free.
 
-The facet ddc contains only the numbers of ddc. The resolving of this numbers to tables will proceeded in Javascript layer. Server delivers a simple list, this list will transform in a tree model.
+The facet ddc contains only the numbers of ddc. The resolving of these numbers to labels will process in the Javascript layer. Server delivers only a simple list, this list will be transformed into a tree model.
 
 The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the original DOM part into a graphical tree.    
 
@@ -569,3 +562,7 @@ The script `/Resources/Public/Javascript/schaufenster.ddc.js` replaces the origi
 ### Adding of new facet components
 
 Currently all new components are realized with pure jQuery. This [page](Dokumentation/Addingfacettype.md) describes the clean, TYPO3-conform way.
+
+### Making previews of remote websites
+
+In some cases it makes sense to show page previews as thumbnails. [This page explaines how](Dokumentation/Screenshots.md)
