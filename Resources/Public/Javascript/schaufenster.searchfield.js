@@ -24,7 +24,7 @@ $(function() {
             return '<a href="'+suchURL.replace('%23%23%23NEEDLE%23%23%23',t.term)+'">'+t.term+ '</a>';
           });
           if (words.length>1)
-            $('.openthesaurus').html('<b>Openthesaurus:</b> ' +words.join(' | '));
+            $('.openthesaurus').html('<b>Open Thesaurus:</b> ' +words.join(' | '));
       });
       $.post('index.php?eID=bighugelabs', {needle: needle}, function(data) {
           console.log(data.noun.syn)
@@ -32,7 +32,7 @@ $(function() {
             return '<a href="'+suchURL.replace('%23%23%23NEEDLE%23%23%23',t)+'">'+t+ '</a>';
           });
           if (words.length>1)
-            $('.bighugelabs').html('<b>BigHugeMap:</b> ' +words.join(' | ') );
+            $('.bighugelabs').html('<b>Princeton University WordNet database:</b> ' +words.join(' | ') );
       });
     }
     //$(".formFields").css('width','600px');
