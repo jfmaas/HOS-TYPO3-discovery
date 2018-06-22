@@ -51,17 +51,20 @@ $(function() {
         var that = $(this);
         that.text(that.text().trim());
     });
+    // autolinking URLs:
     $('span').each(function() {
         var that = $(this);
         that.autolink();
     });
 
+    // URNung:
     if ($('.field-identifierType').text() == 'URN') {
         var identifier = $('.field-identifier');
         var link = identifier.text();
         identifier.html('<a href="https://nbn-resolving.org/' + link + '">' + link + '</a>');
     }
 
+    // iconen vor die Sammlungen:
     $('.facet-id-Collection a').each(function() {
         var PATH = '/typo3conf/ext/schaufenster/Resources/Public/CSS/';
         var that = $(this);
@@ -78,10 +81,9 @@ $(function() {
             break;
 
         }
-
-
     });
 
+    // Auto verlinkung
     $('.field-subject').each(function() {
         var that = $(this);
         var prop = that.text();
@@ -117,29 +119,8 @@ $(function() {
         that.html(link.replace('###NEEDLE###', encodeURI(ddc)) + ' (' + ddctext + ')');
     });
 
-
-
-
     /* Hiding Solr internal keys */
-    $('[class$="_str"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="id"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="score"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="_version_"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="titleLang"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="collector"]').each(function() {
-        $(this).hide();
-    });
-    $('[class$="date"]').each(function() {
+    $('[class$="date"],[class$="dateType"],[class$="collector"],[class$="_str"],[class$="id"],[class$="score"],[class$="_version_"],[class$="titleLang"]').each(function() {
         $(this).hide();
     });
 
@@ -149,9 +130,6 @@ $(function() {
         var html = that.html();
         that.html('<span class="fa fa-male"></span> ' + html)
     });
-
-
-
 
     $('.fieldLabel[for="c-field-Suche"]').each(function() {
         var that = $(this);
@@ -170,7 +148,7 @@ $(function() {
         that.css('display', 'block');
         that.addClass(getResIcon(that.attr('value')));
     });
-    $('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
+    //$('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/schaufenster/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
 
     (function(){   /*  Handling of coloring/graying */
       var COLORING = 'COLORINGFLAG';
