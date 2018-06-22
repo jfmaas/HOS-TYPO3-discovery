@@ -25,6 +25,7 @@ $(function() {
     var preselectedDDC = getPreselectedDDC();
     // Collecting all DDC:
     $('.facet-id-Fachgebiet li').each(function(ndx, elem) {
+
         var that = $(this);
         var ddc = that.attr('value');
         var count = that.attr('count');
@@ -66,7 +67,7 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
     function createHTML(ddc, limit) {
         if (!facets[ddc])
             return ddc_de[ddc].trunc(limit);
-        else return '<a href="' +
+        return '<a href="' +
             DDC_LINK.replace('###NEEDLE###', ddc) +
             '" title="' +
             ddc_de[ddc] +
@@ -77,10 +78,10 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
             '</span>';
     };
     Object.keys(facets).forEach(function(code) {
+        if (!code.match(/\d\d\d/)) return null;
         var level1 = code2tree(code).level1;
         var level2 = code2tree(code).level2;
         var level3 = code2tree(code).level3;
-
         var level1Node = getNodeByName(data, level1);
         if (!level1Node) {
             // top level 1x

@@ -276,3 +276,14 @@ all;opacity:0;background:darkblue}
   line-height:0.55;
   cursor:pointer
 }
+
+.tx_find .results {
+  padding-top:1em!important
+}
+
+.schaufenster_synonymbar {
+  line-height:1.4em;
+  margin:10px 0 0 125px;
+  width:750px;);
+  font-size:0.77em;
+  }

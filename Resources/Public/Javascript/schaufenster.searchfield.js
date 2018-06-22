@@ -16,11 +16,23 @@ $(function() {
     var needle = $('#c1-field-all').val();
     if (needle) {
       const suchURL = '/?tx_find_find[q][all]=%23%23%23NEEDLE%23%23%23';
+      $('form.searchForm').append('<div class="schaufenster_synonymbar openthesaurus" title="Quelle: Openthesaurus.de"></div>');
+      $('form.searchForm').append('<div class="schaufenster_synonymbar bighugelabs" title="Quelle: BigHugeLabs.com"></div>');
+
       $.post('index.php?eID=openthesaurus', {needle: needle}, function(data) {
           var words = data.synsets[0].terms.map(function(t){
             return '<a href="'+suchURL.replace('%23%23%23NEEDLE%23%23%23',t.term)+'">'+t.term+ '</a>';
           });
-          $('form.searchForm').append('<div title="Quelle: Openthesaurus.de" style="margin-left:125px;width:750px;background-color:rgba(255,255,0,80);font-size:0.8em;padding:0 10px"><b>Ähnliche Anfragen:</b> ' +words.join(', ')+ '</div>');
+          if (words.length>1)
+            $('.openthesaurus').html('<b>Openthesaurus:</b> ' +words.join(' | '));
+      });
+      $.post('index.php?eID=bighugelabs', {needle: needle}, function(data) {
+          console.log(data.noun.syn)
+          var words = data.noun.syn.map(function(t){
+            return '<a href="'+suchURL.replace('%23%23%23NEEDLE%23%23%23',t)+'">'+t+ '</a>';
+          });
+          if (words.length>1)
+            $('.bighugelabs').html('<b>BigHugeMap:</b> ' +words.join(' | ') );
       });
     }
     //$(".formFields").css('width','600px');
