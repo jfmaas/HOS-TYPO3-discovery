@@ -13,6 +13,16 @@ $(function() {
     });
     // inserting fieldselectbox:
     var params = getQueries();
+    var needle = $('#c1-field-all').val();
+    if (needle) {
+      const suchURL = '/?tx_find_find[q][all]=%23%23%23NEEDLE%23%23%23';
+      $.post('index.php?eID=openthesaurus', {needle: needle}, function(data) {
+          var words = data.synsets[0].terms.map(function(t){
+            return '<a href="'+suchURL.replace('%23%23%23NEEDLE%23%23%23',t.term)+'">'+t.term+ '</a>';
+          });
+          $('form.searchForm').append('<div title="Quelle: Openthesaurus.de" style="margin-left:125px;width:750px;background-color:rgba(255,255,0,80);font-size:0.8em;padding:0 10px"><b>Ähnliche Anfragen:</b> ' +words.join(', ')+ '</div>');
+      });
+    }
     //$(".formFields").css('width','600px');
     var selectedInput = params.field || 'all';
     var selectHTML = '<div style="width:200px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' +

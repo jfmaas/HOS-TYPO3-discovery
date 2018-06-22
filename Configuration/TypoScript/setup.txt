@@ -63,51 +63,47 @@ plugin.tx_find.settings {
             detailPagePaging = 1
         }
         facets {
-  	     35 {
+        
+  	     10 {
             id=Collection
             displayDefault = 3
             query = (collection:"%s")
             field = collection
           }
-        5 {
+        15 {
               id = Erscheinungsjahr
               type = Histogram
               field = publicationYear
               fetchMaximum=1000
               barWidth=10
           }
-        15 {
+        20 {
             id = Karte
             field = geoLocationPoint
             type = Heatmap
             sortOrder = index
             fetchMaximum = 1000
         }
-        40 {
+        25 {
              id = publisher
              displayDefault = 10
              query = (publisher:"%s")
              field = publisher
         }
-        20 {
+        30 {
              id = Subjects
              displayDefault = 23
              query = (subject:"%s")
              field = subject
           }
-        25 {
-            id=Klassifikation
-            displayDefault = 3
-            query = (classification:"%s")
-            field = classification
-          }
-  	   10 {
+
+  	   35 {
              id = Fachgebiet
              displayDefault = 17
              query = (subject_ddc:"%s")
              field = subject_ddc
        }
-       30  {
+       40  {
              id = Author
              displayDefault = 7
              query = (creatorName:"%s")
