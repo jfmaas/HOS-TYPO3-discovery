@@ -2,7 +2,7 @@ var FIELDS = {
     all: "in allen Feldern …",
     titles: 'Dokumententitel',
     subjects: 'Schlagwort',
-    authors: 'AutorInnen',
+    authors: 'AutorIn',
     publishers: "HerausgeberIn"
 }
 
