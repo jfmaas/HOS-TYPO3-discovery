@@ -2,13 +2,24 @@ function getResIcon(resourceType) {
     var RESOURCE_TYPES = {
         "Dissertation": "bel-zertifikat",
         "Report": "bel-buch",
+        "Thesis": "bel-zertifikat",
         "Article": "bel-artikel",
         "Working Paper": "bel-artikel",
         "Proceedings Part": "bel-artikel",
         "Periodical Part": "bel-artikel",
+        "Journal Issue": "bel-zeit",
         "Preprint": "bel-schreiben",
         "Book": "bel-buch",
+        "Technical Report": "bel-buch",
         "Book Part": "bel-artikel",
+        "Proceedings": "bel-buch",
+        "Journal": "bel-zeit",
+        "Dataset": "bel-tabelle",
+        "Festschrift": "bel-torte",
+        "Poster": "bel-foto",
+        "Presentation": "bel-pcfilm",
+        "InteractiveResource": "bel-papier",
+        "Learning Object": "bel-papier",
         "Conference Object": "bel-leer",
         "Master Thesis": "bel-zertifikat",
         "Bachelor Thesis": "bel-zertifikat",
@@ -68,18 +79,20 @@ $(function() {
     $('.facet-id-Collection a').each(function() {
         var PATH = '/typo3conf/ext/schaufenster/Resources/Public/CSS/';
         var that = $(this);
-        var txt = that.contents().text().trim().substr(0, 3);
+        var txt = that.contents().text().trim();
         switch (txt) {
-            case 'E-D':
+            case 'E-Dissertationen Uni Hamburg':
                 that.prepend('<img src="' + PATH + 'uhh.png" width=23/>');
                 break;
-            case 'Tub':
+            case 'Publikationen Uni Hamburg':
+                that.prepend('<img src="' + PATH + 'uhh.png" width=23/>');
+                break;
+            case 'Publikationen TU Hamburg':
                 that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
                 break;
-            case 'TU ':
-            that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
+            case 'Forschungsdaten TU Hamburg':
+                that.prepend('<img src="' + PATH + 'tuhh.png" width=23/>');
             break;
-
         }
     });
 
@@ -119,8 +132,8 @@ $(function() {
         that.html(link.replace('###NEEDLE###', encodeURI(ddc)) + ' (' + ddctext + ')');
     });
 
-    /* Hiding Solr internal keys */
-    $('[class$="date"],[class$="dateType"],[class$="collector"],[class$="_str"],[class$="id"],[class$="score"],[class$="_version_"],[class$="titleLang"]').each(function() {
+    /* Hiding Solr fields and internal keys */
+    $('[class$="rightsOA"],[class$="source"],[class$="identifierType"],[class$="alternateIdentifierType"],[class$="resourceTypeGeneral"],[class$="university"],[class$="institute"],[class$="date"],[class$="dateType"],[class$="id"],[class$="score"],[class$="_version_"],[class$="titleLang"]').each(function() {
         $(this).hide();
     });
 
