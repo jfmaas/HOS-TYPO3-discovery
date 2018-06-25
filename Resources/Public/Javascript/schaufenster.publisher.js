@@ -18,7 +18,7 @@ $(document).ready(function() {
         }],
         labels: labels
     };
-    $(".facet-id-publisher").html('<h1>HerausgeberIn</h1><canvas height="100" width="100%" id="canvaspublisher"/>');
+    $(".facet-id-publisher").html('<h1>HerausgeberIn/Verlag</h1><canvas height="100" width="100%" id="canvaspublisher"/>');
     try {
         function onPieClick(event, elem) {
             if (elem[0] != undefined) {
