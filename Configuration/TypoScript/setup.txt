@@ -22,7 +22,7 @@ plugin.tx_find.settings {
           	  id = all
             	  noescape = 1
             	  type = Text
-                  query={!type=dismax qf='title^2.0 subject creatorName'}(%s*)
+                  query={!type=dismax qf='abstract alternativeTitle creatorName contributorName identifier otherTitle title^2.0 publisher resourceType seriesInformation subject subtitle tableOfContents translatedTitle'}(%s*)
 	          autocomplete = 1
             }
  	        1 {
