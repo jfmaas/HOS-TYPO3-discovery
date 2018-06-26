@@ -87,8 +87,8 @@ plugin.tx_find.settings {
         25 {
              id = publisher
              displayDefault = 10
-             query = (publisher:"%s")
-             field = publisher
+             query = (publisher_facet:"%s")
+             field = publisher_facet
         }
         30 {
              id = Subjects
@@ -106,8 +106,8 @@ plugin.tx_find.settings {
        40  {
              id = Author
              displayDefault = 7
-             query = (creatorName:"%s")
-             field = creatorName
+             query = (creatorName_facet:"%s")
+             field = creatorName_facet
       }
       45 {
             id = resourceType
